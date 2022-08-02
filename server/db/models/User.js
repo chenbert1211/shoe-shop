@@ -12,18 +12,27 @@ const User = db.define("user", {
     unique: true,
     allowNull: false,
   },
+
   password: {
     type: Sequelize.STRING,
   },
+
   firstName: {
     type: Sequelize.STRING,
     unique: true,
     allowNull: false,
+    validate: {
+      notEmpty: true
+  }
   },
+
   lastName: {
     type: Sequelize.STRING,
     unique: true,
     allowNull: false,
+    validate: {
+      notEmpty: true
+  }
   },
 
   email: {
@@ -36,12 +45,12 @@ const User = db.define("user", {
   },
   creditCard: {
     type: Sequelize.STRING,
-    allowNull: true,
-    validate: {
-      isCreditCard: true,
-    },
+    // allowNull: true,
+    // validate: {
+    //   isCreditCard: true,
+    // },
   },
-  phoneNumber: {
+/*   phoneNumber: {
     type: Sequelize.STRING,
     allowNull: true,
     validate: {
@@ -49,7 +58,7 @@ const User = db.define("user", {
       len: { args: [10, 10], msg: "Phone Number is invalid" },
       isInt: { args: true, msg: "You must enter Phone Number" },
     },
-  },
+  } */
   address: {
     type: Sequelize.STRING,
     allowNull: false,

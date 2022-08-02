@@ -25,7 +25,6 @@ const users = [
     lastName: "Chen",
     email: "wc.watsonchen@gmail.com",
     creditCard: "1234567890123456",
-    phoneNumber: "15006678899",
     address: "100 Lake Rd",
   },
 ];
