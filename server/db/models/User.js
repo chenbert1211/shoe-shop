@@ -40,15 +40,15 @@ const User = db.define('user', {
       isCreditCard: true,
     }
   },
-  phoneNumber: {
-    type:Sequelize.STRING,
-    allowNull:true,
-    validate: {
-      notNull: { args: true, msg: "You must enter Phone Number" },
-      len: { args: [11,11], msg: 'Phone Number is invalid' },
-      isInt: { args: true, msg: "You must enter Phone Number" },
-    }
-  },
+  // phoneNumber: {
+  //   type:Sequelize.STRING,
+  //   allowNull:true,
+  //   validate: {
+  //     notNull: { args: true, msg: "You must enter Phone Number" },
+  //     len: { args: [11,11], msg: 'Phone Number is invalid' },
+  //     isInt: { args: true, msg: "You must enter Phone Number" },
+  //   }
+  // },
   address: {
     type: Sequelize.STRING,
     allowNull: false,

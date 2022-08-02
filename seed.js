@@ -1,7 +1,8 @@
 const { green, red } = require("chalk");
-const { db, Campus, Student } = require("./server/db");
+const { db,  models:{Product} }= require("./server/db");
 
-const product = [
+
+const products = [
   {
     id:1,
     name: "Air Jordan",
@@ -96,147 +97,20 @@ const product = [
   },
 ];
 
-const newBalance = [
-  {
-    id:1,
-    name: "New Balance Street Style",
-    imageUrl:
-      "https://media.gettyimages.com/photos/eva-staudinger-wearing-sosue-jogging-suit-new-balance-sneaker-on-14-picture-id1296718917?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"men"
-  },
-  {
-    id:2,
-    name: "New Balance Street Culture",
-    imageUrl:
-      "https://media.gettyimages.com/photos/new-balance-sneakers-on-sale-picture-id494842445?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"men"
-  },
-  {
-    id:3,
-    name: "New Balance  Fight Club",
-    imageUrl:
-      "https://media.gettyimages.com/photos/new-balance-revlite-sneaker-during-london-fashion-week-mens-january-picture-id631234442?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"men"
-  },
-  {
-    id:4,
-    name: "New Balance Red of Duty",
-    imageUrl:
-      "https://media.gettyimages.com/photos/red-new-balance-shoes-are-seen-on-october-19-2016-in-ho-chi-minh-city-picture-id615580046?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"men"
-  },
-  {
-    id:5,
-    name: "New Balance Running ",
-    imageUrl:
-      "https://media.gettyimages.com/photos/guest-wears-black-denim-pants-yellow-platform-soles-sneakers-from-new-picture-id1389511101?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"men"
-  },
-  {
-    id:6,
-    name: "New Balance Paris  Collection",
-    imageUrl:
-      "https://media.gettyimages.com/photos/marisa-wears-new-balance-trainers-zara-sweater-and-trousers-bimba-y-picture-id471241302?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"women"
-  },
-  { id:7,
-    name: "New Balance Big O Data",
-    imageUrl:
-      "https://media.gettyimages.com/photos/guest-wears-black-denim-pants-yellow-platform-soles-sneakers-from-new-picture-id1389511101?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"women"
-  },
-  {
-    id:8,
-    name: "New Balance Sorted Yellow",
-    imageUrl:
-      "https://media.gettyimages.com/photos/natalia-verza-aka-mascarada-paris-wears-yellow-monogram-printed-gucci-picture-id1290181590?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"women"
-  },
-  {
-    id:9,
-    name: "New Balance Soldier Green",
-    imageUrl:
-      "https://media.gettyimages.com/photos/alexandra-pereira-wears-beige-wool-large-pants-white-with-green-logo-picture-id1348852329?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"women"
-  },
-  {
-    id:10,
-    name: "New Balance Walking Dead",
-    imageUrl:
-      "https://media.gettyimages.com/photos/guest-wears-a-pale-purple-with-green-flower-print-pattern-vneck-a-picture-id1372799658?s=2048x2048",
-      description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      category:"women"
-  },
-];
+
 
 const seed = async () => {
   try {
+
     await db.sync({ force: true });
 
     // seed your database here!
-    ///seeding campuses data///
     await Promise.all(
-      campuses.map((campus) => {
-        return Campus.create(campus);
+      products.map((product) => {
+        return Product.create(product);
       })
     );
 
-    ///seeding student data///
-    await Promise.all(
-      students.map((student) => {
-        return Student.create(student);
-      })
-    );
-
-    ///eager loading///
-    const campusOne = await Campus.findByPk(1);
-    const campusTwo = await Campus.findByPk(2);
-    const campusThree = await Campus.findByPk(3);
-    const campusFour = await Campus.findByPk(4);
-    const campusFive = await Campus.findByPk(5);
-    // const campusSix = await Campus.findByPk(6);
-
-    const studentOne = await Student.findByPk(1);
-    const studentTwo = await Student.findByPk(2);
-    const studentThree = await Student.findByPk(3);
-    const studentFour = await Student.findByPk(4);
-    const studentFive = await Student.findByPk(5);
-    const studentSix = await Student.findByPk(6);
-    const studentSeven = await Student.findByPk(7);
-    const studentEight = await Student.findByPk(8);
-    const studentNine = await Student.findByPk(9);
-    // const studentTen = await Student.findByPk(10);
-
-    ///assign student to Campus by magic  method ///
-    await campusOne.setStudents([studentOne, studentTwo]);
-    await campusTwo.setStudents([studentThree]);
-    await campusThree.setStudents([studentFour]);
-    await campusFour.setStudents([
-      studentFive,
-      studentSix,
-      studentSeven,
-      studentEight,
-    ]);
-    await campusFive.setStudents([studentNine]);
   } catch (err) {
     // console.log("SEEDING ERROR !")
     console.log(red(err));
