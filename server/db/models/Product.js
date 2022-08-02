@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 const db = require('./database')
 
 const Product = db.define('product', {
@@ -27,15 +27,23 @@ const Product = db.define('product', {
   },
   category: {
     type: Sequelize.STRING,
+    allowNull: false,
     validate: {
-      isIn: [['W','M']]
+      isIn: [['W','M']],
+      notEmpty: true,
     }
   },
   inventory: {
     type: Sequelize.INTEGER,
     defaultValue: 0,
 
+  },
+  brand: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    }
   }
-
 })
 module.exports = Product;
