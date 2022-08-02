@@ -14,7 +14,6 @@ const Product = db.define('product', {
     allowNull: false,
     validate: {
       notEmpty: true,
-      max:10, min:5
     }
   },
   imageUrl: {
@@ -29,14 +28,13 @@ const Product = db.define('product', {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      isIn: [['W','M']],
+      isIn: [['W','M','U']],
       notEmpty: true,
     }
   },
   inventory: {
     type: Sequelize.INTEGER,
     defaultValue: 0,
-
   },
   brand: {
     type: Sequelize.STRING,
