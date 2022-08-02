@@ -12,9 +12,50 @@ const User = db.define('user', {
     unique: true,
     allowNull: false
   },
+  firstName: {
+    type: Sequelize.STRING,
+    unique: true,
+    allowNull: false
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    unique: true,
+    allowNull: false
+  },
   password: {
     type: Sequelize.STRING,
-  }
+  },
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+      isEmail: true
+    }
+  },
+  creditCard: {
+    type: Sequelize.INTEGER,
+    allowNull: true,
+    validate: {
+      isCreditCard: true,
+    }
+  },
+  phoneNumber: {
+    type:Sequelize.STRING,
+    allowNull:true,
+    validate: {
+      notNull: { args: true, msg: "You must enter Phone Number" },
+      len: { args: [11,11], msg: 'Phone Number is invalid' },
+      isInt: { args: true, msg: "You must enter Phone Number" },
+    }
+  },
+  address: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    }
+  },
 })
 
 module.exports = User
