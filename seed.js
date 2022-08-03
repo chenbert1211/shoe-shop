@@ -15,6 +15,7 @@ const products = [
     category: "M",
     brand: "Air Jordan",
     inventory: 10,
+    price: 220,
   },
   {
     name: "Air Jordan 1",
@@ -26,6 +27,7 @@ const products = [
     category: "M",
     brand: "Air Jordan",
     inventory: 10,
+    price: 180,
   },
   {
     name: "Nike Air Max",
@@ -37,10 +39,11 @@ const products = [
     category: "M",
     brand: "Nike",
     inventory: 10,
+    price: 210,
   },
   {
     name: "Air Jordan Bred 11s",
-    size: 8.5,
+    size: 9,
     imageUrl:
       "https://media.gettyimages.com/photos/dec-1995-a-closeup-shot-of-air-jordans-as-they-appear-on-the-court-picture-id394305?s=2048x2048",
     description:
@@ -48,6 +51,7 @@ const products = [
     category: "M",
     brand: "Air Jordan",
     inventory: 10,
+    price: 220,
   },
   {
     name: "Kobe Bryant Air Women",
