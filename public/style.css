@@ -32,7 +32,7 @@ form div {
   position: fixed;
   width: 98.8%;
   padding-left: 7px;
-  padding-top: 7px;
+  padding-top: 20px;
 }
 
 #navbar h1 {
@@ -42,7 +42,7 @@ form div {
 }
 
 #nbf-logo {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-left: 60px;
   height: 100px;
   width: 175px;
