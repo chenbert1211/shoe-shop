@@ -6,8 +6,6 @@ import history from './history';
 import store from './store';
 import App from './App';
 
-console.log(store);
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>

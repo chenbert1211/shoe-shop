@@ -139,3 +139,34 @@ form div {
 }
 
 /* ALL SHOES (HOMEPAGE) */
+
+#all-shoes-view {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#all-shoes-view h1 {
+  text-align: center;
+}
+
+#product-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product a {
+  text-align: center;
+  padding: 10px;
+}
+
+.product-image {
+  height: 250px;
+  width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
