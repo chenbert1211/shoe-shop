@@ -8,7 +8,8 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
     <nav>
       <div id="navbar">
         <input id="searchbar" type="text" placeholder="Search"></input>
-        <h1 id="logo-text">FlightClub 2: Still Flying</h1>
+        {/* <h1 id="logo-text">FlightClub 2: Still Flying</h1> */}
+        <img id="nbf-logo" src="/nbf-logo-3.png" />
         <div id="left-nav-buttons">
           <div id="user-container">
             <a>Guest</a>

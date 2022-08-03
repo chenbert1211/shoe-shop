@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import AllShoes from './AllShoes';
 
 /**
  * COMPONENT
@@ -8,8 +9,12 @@ export const Home = (props) => {
   const { username } = props;
 
   return (
-    <div>
-      <h3>TEST HOME {username}</h3>
+    <div id="homepage">
+      {/* <h3>TEST HOME</h3> */}
+      <img id="banner-pic" src="/banner-pic.webp" />
+      <div id="all-shoes">
+        <AllShoes />
+      </div>
     </div>
   );
 };
