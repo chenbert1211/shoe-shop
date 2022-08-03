@@ -1,26 +1,31 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+import AllShoes from './AllShoes';
 
 /**
  * COMPONENT
  */
-export const Home = props => {
-  const {username} = props
+export const Home = (props) => {
+  const { username } = props;
 
   return (
-    <div>
-      <h3>Welcome, {username}</h3>
+    <div id="homepage">
+      {/* <h3>TEST HOME</h3> */}
+      <img id="banner-pic" src="/banner-pic.webp" />
+      <div id="all-shoes">
+        <AllShoes />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 /**
  * CONTAINER
  */
-const mapState = state => {
+const mapState = (state) => {
   return {
-    username: state.auth.username
-  }
-}
+    username: state.auth.username,
+  };
+};
 
-export default connect(mapState)(Home)
+export default connect(mapState)(Home);
