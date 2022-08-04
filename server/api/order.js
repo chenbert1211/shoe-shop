@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-//localhost/order/:userId
+//localhost/order/
 router.get("/", async (req, res, next) => {
   const id = req.params.userId;
   try {
