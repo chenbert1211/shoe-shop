@@ -16,6 +16,7 @@ const products = [
     brand: "Air Jordan",
     inventory: 10,
     price: 220,
+    stylecode: "378037 061",
   },
   {
     name: "Air Jordan 1",
@@ -28,6 +29,7 @@ const products = [
     brand: "Air Jordan",
     inventory: 10,
     price: 180,
+    stylecode: "dm7866 162",
   },
   {
     name: "Nike Air Max",
@@ -86,7 +88,7 @@ const users = [
     email: "wc.watsonchen@gmail.com",
     creditCard: "1234567890123456",
     address: "100 Lake Rd",
-    phoneNumber:"6504577805"
+    phoneNumber: "6504577805",
   },
 ];
 

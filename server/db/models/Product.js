@@ -9,13 +9,6 @@ const Product = db.define("product", {
       notEmpty: true,
     },
   },
-  size: {
-    type: Sequelize.DECIMAL,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
-  },
   imageUrl: {
     type: Sequelize.STRING,
     defaultValue:
@@ -26,18 +19,6 @@ const Product = db.define("product", {
     defaultValue:
       "A pair of basketball legend Michael Jordan's famous Air Jordans from his rookie season are seen on April 28, 2021 in Geneva",
   },
-  category: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      isIn: [["W", "M", "U"]],
-      notEmpty: true,
-    },
-  },
-  inventory: {
-    type: Sequelize.INTEGER,
-    defaultValue: 0,
-  },
   brand: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -45,12 +26,8 @@ const Product = db.define("product", {
       notEmpty: true,
     },
   },
-  price: {
-    type: Sequelize.INTEGER,
-    defaultValue: 0,
-    validate: {
-      notEmpty: true,
-    },
+  stylecode: {
+    type: Sequelize.STRING,
   },
 });
 module.exports = Product;
