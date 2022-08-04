@@ -31,4 +31,14 @@ router.get("/:order_productId", async (req, res, next) => {
   }
 });
 
+router.post("/", async (req, res, next) => {
+  try {
+    const order_product = 
+    // const order_product = await Order_Product.findAll();
+    res.json(order_product);
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;

@@ -45,20 +45,20 @@ const User = db.define("user", {
   },
   creditCard: {
     type: Sequelize.STRING,
-    // allowNull: true,
-    // validate: {
-    //   isCreditCard: true,
-    // },
-  },
-/*   phoneNumber: {
-    type: Sequelize.STRING,
     allowNull: true,
+    validate: {
+      // isCreditCard: true,
+    },
+  },
+  phoneNumber: {
+    type: Sequelize.STRING,
+    allowNull: false,
     validate: {
       notNull: { args: true, msg: "You must enter Phone Number" },
       len: { args: [10, 10], msg: "Phone Number is invalid" },
       isInt: { args: true, msg: "You must enter Phone Number" },
     },
-  } */
+  },
   address: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -66,6 +66,10 @@ const User = db.define("user", {
       notEmpty: true,
     },
   },
+  isAdmin: {
+    type:Sequelize.BOOLEAN,
+    defaultValue: false
+  }
 });
 
 module.exports = User;

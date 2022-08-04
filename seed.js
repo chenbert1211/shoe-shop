@@ -86,6 +86,7 @@ const users = [
     email: "wc.watsonchen@gmail.com",
     creditCard: "1234567890123456",
     address: "100 Lake Rd",
+    phoneNumber:"6504577805"
   },
 ];
 
