@@ -1,7 +1,8 @@
 const { green, red } = require("chalk");
+const { prependOnceListener } = require("sneaks-api/models/Sneaker");
 const {
   db,
-  models: { Product, User },
+  models: { Product, User, Order_Product },
 } = require("./server/db");
 
 const products = [
@@ -14,7 +15,7 @@ const products = [
       "6 Dec 1995: A close-up shot of Air Jordans as they appear on the court during the game between the New York Knicks and the Chicago Bulls at the United Center in Chicago, Illinois. The Bulls defeated the Knicks 101-94. Mandatory Credit: Jonathan Daniel /Allsport",
     category: "M",
     brand: "Air Jordan",
-    inventory: 10,
+    quantity: 10,
     price: 220,
     stylecode: "378037 061",
   },
@@ -27,7 +28,7 @@ const products = [
       "6 Dec 1995: A close-up shot of Air Jordans as they appear on the court during the game between the New York Knicks and the Chicago Bulls at the United Center in Chicago, Illinois. The Bulls defeated the Knicks 101-94. Mandatory Credit: Jonathan Daniel /Allsport",
     category: "M",
     brand: "Air Jordan",
-    inventory: 10,
+    quantity: 10,
     price: 180,
     stylecode: "dm7866 162",
   },
@@ -40,7 +41,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     category: "M",
     brand: "Nike",
-    inventory: 10,
+    quantity: 10,
     price: 210,
   },
   {
@@ -52,7 +53,7 @@ const products = [
       "6 Dec 1995: A close-up shot of Air Jordans as they appear on the court during the game between the New York Knicks and the Chicago Bulls at the United Center in Chicago, Illinois. The Bulls defeated the Knicks 101-94. Mandatory Credit: Jonathan Daniel /Allsport",
     category: "M",
     brand: "Air Jordan",
-    inventory: 10,
+    quantity: 10,
     price: 220,
   },
   {
@@ -64,7 +65,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     category: "W",
     brand: "Nike",
-    inventory: 10,
+    quantity: 10,
   },
   {
     name: "Nike African Style",
@@ -75,7 +76,7 @@ const products = [
       "African-American rapper, songwriter, actor and record producer Antwan André Patton (born 1975), known by his stage name Big Boi, is best known for being a member of the southern hip hop duo Outkast. Pair of white Nike sneakers with glitter red, blue, and yellow sections worn by Big Boi of Outkast. The low-top sneakers have white leather on the perforated top toes, the front half of the side vamps, the upper portion of the heel cap, and on the facing of the tongues. ",
     category: "U",
     brand: "Nike",
-    inventory: 10,
+    quantity: 10,
   },
 ];
 
@@ -99,9 +100,35 @@ const seed = async () => {
     // seed your database here!
     await Promise.all(
       products.map((product) => {
-        return Product.create(product);
+        return Product.create({
+          name: product.name,
+          imageUrl: product.imageUrl,
+          brand: product.brand,
+        });
       })
     );
+
+    // await Promise.all(
+    //   products.map((product) => {
+    //     return Order_Product.create({
+    //       productId: 1,
+    //       orderId: 2,
+    //       quantity: product.quantity,
+    //       size: product.size,
+    //       category: product.category,
+    //       price: product.price,
+    //     });
+    //   })
+    // );
+
+    await Order_Product.create({
+      productId: 1,
+
+      quantity: 1,
+      size: 6,
+      category: 'W',
+      price: 70000,
+    });
 
     await Promise.all(
       users.map((user) => {
