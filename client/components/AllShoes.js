@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchShoes } from '../store/redux/allShoes';
 
@@ -8,7 +9,6 @@ export class AllShoes extends Component {
   }
 
   render() {
-    console.log('this.props', this.props.allShoes);
     const allShoes = this.props.allShoes;
     return (
       <div id="all-shoes-view">
@@ -16,10 +16,12 @@ export class AllShoes extends Component {
         <div id="product-view">
           {allShoes.map((shoe) => {
             return (
-              <div key={shoe.id} className="product">
-                <img className="product-image" src={shoe.imageUrl} />
-                <a>{shoe.name}</a>
-              </div>
+              <Link key={shoe.id} to={`/product/${shoe.id}`}>
+                <div className="product">
+                  <img className="product-image" src={shoe.imageUrl} />
+                  <div>{shoe.name}</div>
+                </div>
+              </Link>
             );
           })}
         </div>
