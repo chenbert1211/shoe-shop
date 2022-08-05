@@ -32,7 +32,7 @@ form div {
   position: fixed;
   width: 98.8%;
   padding-left: 7px;
-  padding-top: 7px;
+  padding-top: 20px;
 }
 
 #navbar h1 {
@@ -42,7 +42,7 @@ form div {
 }
 
 #nbf-logo {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-left: 60px;
   height: 100px;
   width: 175px;
@@ -139,3 +139,224 @@ form div {
 }
 
 /* ALL SHOES (HOMEPAGE) */
+
+#all-shoes-view {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#all-shoes-view h1 {
+  text-align: center;
+}
+
+#product-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product div {
+  text-align: center;
+  padding: 10px;
+}
+
+.product-image {
+  height: 250px;
+  width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* SINGLE SHOE VIEW */
+
+#single-shoe-view {
+  padding-top: 12%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#single-shoe-view img {
+  height: 535px;
+  width: 715px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#shoe-detail-container {
+  display: flex;
+}
+
+#shoe-specs {
+  margin-left: 5%;
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+#size-grid {
+  display: flex;
+  margin-left: 4%;
+  width: 500px;
+  height: 400px;
+  /* background-color: rgb(209, 101, 130); */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-square {
+  height: 51px;
+  width: 72px;
+  margin: 5px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background 200ms ease-in;
+}
+
+.grid-square:hover {
+  height: 51px;
+  width: 72px;
+  margin: 5px;
+  border-width: 1px;
+  border-color: rgb(139, 139, 139);
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  background: rgb(139, 139, 139);
+}
+
+.grid-square h5 {
+  top: 50%;
+}
+
+#button-description {
+  display: flex;
+  flex-direction: column;
+}
+
+#shoe-specs button {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  align-items: center;
+  background: #06f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  min-width: 140px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  transition: background 200ms ease-in;
+}
+
+#shoe-specs button:hover {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  align-items: center;
+  background: rgb(202, 61, 48);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  min-width: 140px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#shoe-description {
+  margin: 15px;
+  text-align: left;
+  padding-top: 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#shoe-description a {
+  margin-right: 7px;
+  margin-left: 7px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#shoe-description div {
+  margin-top: 10px;
+  margin-right: 7px;
+  margin-left: 7px;
+  padding-bottom: 7px;
+}
+
+/* RECCOMENDED SHOES (IN SINGLE SHOE VIEW) */
+
+#reccomended-outer-div {
+  margin-top: 330px;
+}
+
+#reccomended-outer-div a {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#reccomended-products {
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 260px;
+  border-width: 1px;
+  border-color: rgb(200, 197, 197);
+  border-style: solid;
+  border-radius: 20px;
+}
+
+#reccomended-details {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 240px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 20px;
+}
+
+#reccomended-shoe {
+  display: flex;
+  flex-direction: column;
+}
+
+#reccomended-shoe img {
+  height: 175px;
+  width: 225px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+#reccomended-shoe a {
+  text-align: center;
+  padding-top: 8px;
+  font-size: 15px;
+  font-weight: 300;
+}
