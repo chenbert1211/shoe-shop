@@ -70,7 +70,10 @@ const User = db.define("user", {
     type:Sequelize.BOOLEAN,
     defaultValue: false
   }
-});
+},
+{timestamps:false}
+
+);
 
 module.exports = User;
 

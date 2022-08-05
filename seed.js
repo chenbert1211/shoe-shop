@@ -1,5 +1,5 @@
 const { green, red } = require("chalk");
-const { prependOnceListener } = require("sneaks-api/models/Sneaker");
+
 const {
   db,
   models: { Product, User, Order_Product },
@@ -17,7 +17,7 @@ const products = [
     brand: "Air Jordan",
     quantity: 10,
     price: 220,
-    stylecode: "378037 061",
+    stylecode: "378037061",
   },
   {
     name: "Air Jordan 1",
@@ -93,6 +93,30 @@ const users = [
   },
 ];
 
+const order_products = [
+  {
+    productId: 1,
+    quantity: 1,
+    size: 6,
+    category: "W",
+    price: 70000,
+  },
+  {
+    productId: 1,
+    quantity: 1,
+    size: 7,
+    category: "W",
+    price: 70000,
+  },
+  {
+    productId: 1,
+    quantity: 1,
+    size: 8,
+    category: "M",
+    price: 70000,
+  },
+];
+
 const seed = async () => {
   try {
     await db.sync({ force: true });
@@ -121,14 +145,19 @@ const seed = async () => {
     //   })
     // );
 
-    await Order_Product.create({
-      productId: 1,
+    // await Order_Product.create({
+    //   productId: 1,
+    //   quantity: 1,
+    //   size: 6,
+    //   category: 'W',
+    //   price: 70000,
+    // });
 
-      quantity: 1,
-      size: 6,
-      category: 'W',
-      price: 70000,
-    });
+    await Promise.all(
+      order_products.map((orderProduct) => {
+        return Order_Product.create(orderProduct);
+      })
+    );
 
     await Promise.all(
       users.map((user) => {

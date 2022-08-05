@@ -18,8 +18,12 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
             <a>Guest</a>
             <div id="user-icon"></div>
             <div id="user-container-dropdown">
-              <a>Create Account</a>
-              <a>Log In</a>
+              <Link to="/signup">
+                <a>Create Account</a>
+              </Link>
+              <Link to="/login">
+                <a>Log In</a>
+              </Link>
             </div>
           </div>
           <img id="cart-icon" src="/cart-icon.png" />

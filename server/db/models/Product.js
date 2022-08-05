@@ -29,5 +29,7 @@ const Product = db.define("product", {
   stylecode: {
     type: Sequelize.STRING,
   },
-});
+},
+{timestamps:false}
+);
 module.exports = Product;
