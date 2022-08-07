@@ -33,6 +33,7 @@ export const authenticate = (username, password, method) => async dispatch => {
     const res = await axios.post(`/auth/${method}`, {username, password})
     window.localStorage.setItem(TOKEN, res.data.token)
     dispatch(me())
+    history.push('/')
   } catch (authError) {
     return dispatch(setAuth({error: authError}))
   }
@@ -40,7 +41,8 @@ export const authenticate = (username, password, method) => async dispatch => {
 
 export const logout = () => {
   window.localStorage.removeItem(TOKEN)
-  history.push('/login')
+  history.push('/')
+  window.location.reload(false);
   return {
     type: SET_AUTH,
     auth: {}

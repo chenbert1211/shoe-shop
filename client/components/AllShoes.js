@@ -10,6 +10,7 @@ export class AllShoes extends Component {
 
   render() {
     const allShoes = this.props.allShoes;
+    // console.log(this.props)
     return (
       <div id="all-shoes-view">
         <h1>All Shoes</h1>

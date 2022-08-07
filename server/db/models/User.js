@@ -19,29 +19,29 @@ const User = db.define("user", {
 
   firstName: {
     type: Sequelize.STRING,
-    unique: true,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-  }
+    // unique: true,
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true
+  // }
   },
 
   lastName: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-  }
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true
+  // }
   },
 
   email: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-      isEmail: true,
-    },
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true,
+    //   isEmail: true,
+    // },
   },
   creditCard: {
     type: Sequelize.STRING,
@@ -52,25 +52,27 @@ const User = db.define("user", {
   },
   phoneNumber: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notNull: { args: true, msg: "You must enter Phone Number" },
-      len: { args: [10, 10], msg: "Phone Number is invalid" },
-      isInt: { args: true, msg: "You must enter Phone Number" },
-    },
+    // allowNull: false,
+    // validate: {
+    //   notNull: { args: true, msg: "You must enter Phone Number" },
+    //   len: { args: [10, 10], msg: "Phone Number is invalid" },
+    //   isInt: { args: true, msg: "You must enter Phone Number" },
+    // },
   },
   address: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true,
+    // },
   },
   isAdmin: {
     type:Sequelize.BOOLEAN,
     defaultValue: false
   }
 },
+
+
 {timestamps:false}
 
 );

@@ -283,6 +283,10 @@ form div {
   margin-right: 30%;
 }
 
+.selectedSize{
+  background-color: grey;
+}
+
 #shoe-description {
   margin: 15px;
   text-align: left;

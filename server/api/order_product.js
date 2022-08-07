@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const e = require("express");
 const {
-  models: { Order_Product },
+  models: { Order_Product, Product },
 } = require("../db");
 
 router.get("/", async (req, res, next) => {
@@ -13,14 +13,11 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:order_productId", async (req, res, next) => {
-  const id = req.params.productId;
+router.get("/:id", async (req, res, next) => {
+  const id = req.params.id;
+  console.log(id)
   try {
-    const order_product = await Order_Product.findOne({
-      where: {
-        id: id,
-      },
-    });
+    const order_product = await Order_Product.findByPk(id, {include: Product});
     if (order_product) {
       res.send(order_product);
     } else {

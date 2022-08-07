@@ -5,6 +5,8 @@ import { Login, Signup } from './components/AuthForm';
 import Home from './components/Home';
 import { me } from './store';
 import SingleShoe from './components/SingleShoe';
+import Cart from './components/Cart';
+import Account from './components/Account';
 
 /**
  * COMPONENT
@@ -16,13 +18,17 @@ class Routes extends Component {
 
   render() {
     const { isLoggedIn } = this.props;
-
+// console.log(isLoggedIn)
     return (
       <div>
         {isLoggedIn ? (
           <Switch>
-            <Route path="/home" component={Home} />
-            <Redirect to="/home" />
+            <Route path="/" exact component={Home} />
+            <Route path="/product/:id" component={SingleShoe} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Route path='/cart' component={Cart} />
+            <Route path='/account' component={Account} />
           </Switch>
         ) : (
           <Switch>
@@ -30,6 +36,7 @@ class Routes extends Component {
             <Route path="/product/:id" component={SingleShoe} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route path='/cart' component={Cart} />
           </Switch>
         )}
       </div>
