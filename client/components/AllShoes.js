@@ -8,10 +8,6 @@ import { getUserCart } from '../store/redux/cart';
 export class AllShoes extends Component {
   componentDidMount() {
     this.props.getShoes();
-    if(!!this.props.auth.id)
-    {
-      this.props.getUserCart(this.props.auth.id)
-    }
   }
 
   render() {
