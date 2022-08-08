@@ -19,54 +19,99 @@ const User = db.define("user", {
 
   firstName: {
     type: Sequelize.STRING,
-    unique: true,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-  }
+    // unique: true,
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true
+  // }
   },
 
   lastName: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-  }
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true
+  // }
   },
 
   email: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-      isEmail: true,
-    },
-  },
-  creditCard: {
-    type: Sequelize.STRING,
-    // allowNull: true,
+    // allowNull: false,
     // validate: {
-    //   isCreditCard: true,
+    //   notEmpty: true,
+    //   isEmail: true,
     // },
   },
-/*   phoneNumber: {
+  
+  
+  
+  creditCard: {
     type: Sequelize.STRING,
     allowNull: true,
     validate: {
-      notNull: { args: true, msg: "You must enter Phone Number" },
-      len: { args: [10, 10], msg: "Phone Number is invalid" },
-      isInt: { args: true, msg: "You must enter Phone Number" },
-    },
-  } */
-  address: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
+      // isCreditCard: true,
     },
   },
-});
+  nameOnCard:{
+    type: Sequelize.STRING
+  },
+  CardExp:{
+    type: Sequelize.STRING
+  },
+  
+  phoneNumber: {
+    type: Sequelize.STRING,
+    // allowNull: false,
+    // validate: {
+    //   notNull: { args: true, msg: "You must enter Phone Number" },
+    //   len: { args: [10, 10], msg: "Phone Number is invalid" },
+    //   isInt: { args: true, msg: "You must enter Phone Number" },
+    // },
+  },
+  imageUrl: {
+  type: Sequelize.STRING
+},
+
+
+
+
+
+  address: {
+    type: Sequelize.STRING,
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true,
+    // },
+  },
+  city:{
+    type: Sequelize.STRING
+  },
+  state:{
+    type: Sequelize.STRING
+  },
+  zipCode:{
+    type: Sequelize.INTEGER
+  },
+  
+  
+  
+  cart:{
+     type: Sequelize.ARRAY(Sequelize.JSON),
+            defaultValue: []
+  },
+  
+  
+  isAdmin: {
+    type:Sequelize.BOOLEAN,
+    defaultValue: false
+  }
+},
+
+
+{timestamps:false}
+
+);
 
 module.exports = User;
 

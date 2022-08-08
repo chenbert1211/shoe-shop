@@ -5,12 +5,12 @@ import AllShoes from './AllShoes';
 /**
  * COMPONENT
  */
+
 export const Home = (props) => {
   const { username } = props;
 
   return (
     <div id="homepage">
-      {/* <h3>TEST HOME</h3> */}
       <img id="banner-pic" src="/banner-pic.webp" />
       <div id="all-shoes">
         <AllShoes />
