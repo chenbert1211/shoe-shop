@@ -16,15 +16,11 @@ constructor(props){
         phoneNumber: null,
         email: null
         }
-        
+
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.deleteAccount = this.deleteAccount.bind(this)
 }
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
   handleChange(event) {
     this.setState({
