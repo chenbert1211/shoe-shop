@@ -35,3 +35,20 @@ router.get('/me', async (req, res, next) => {
     next(ex)
   }
 })
+
+
+router.put('/update', async (req, res, next) => {
+  try{
+  const name = req.body
+  const updateAcc = await User.findOne({
+      where: {
+        id: name.id,
+      },
+    })
+    // console.log(name, updateAcc)
+  res.send(updateAcc.update(name))
+  }catch(error){
+    next(error)
+  }
+})
+    

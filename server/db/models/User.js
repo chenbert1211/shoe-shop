@@ -43,6 +43,9 @@ const User = db.define("user", {
     //   isEmail: true,
     // },
   },
+  
+  
+  
   creditCard: {
     type: Sequelize.STRING,
     allowNull: true,
@@ -50,6 +53,13 @@ const User = db.define("user", {
       // isCreditCard: true,
     },
   },
+  nameOnCard:{
+    type: Sequelize.STRING
+  },
+  CardExp:{
+    type: Sequelize.STRING
+  },
+  
   phoneNumber: {
     type: Sequelize.STRING,
     // allowNull: false,
@@ -59,6 +69,14 @@ const User = db.define("user", {
     //   isInt: { args: true, msg: "You must enter Phone Number" },
     // },
   },
+  imageUrl: {
+  type: Sequelize.STRING
+},
+
+
+
+
+
   address: {
     type: Sequelize.STRING,
     // allowNull: false,
@@ -66,6 +84,24 @@ const User = db.define("user", {
     //   notEmpty: true,
     // },
   },
+  city:{
+    type: Sequelize.STRING
+  },
+  state:{
+    type: Sequelize.STRING
+  },
+  zipCode:{
+    type: Sequelize.INTEGER
+  },
+  
+  
+  
+  cart:{
+     type: Sequelize.ARRAY(Sequelize.JSON),
+            defaultValue: []
+  },
+  
+  
   isAdmin: {
     type:Sequelize.BOOLEAN,
     defaultValue: false

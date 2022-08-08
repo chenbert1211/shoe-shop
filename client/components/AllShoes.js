@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchShoes } from '../store/redux/allShoes';
+import { getUserCart } from '../store/redux/cart';
+
 
 export class AllShoes extends Component {
   componentDidMount() {
     this.props.getShoes();
+    if(!!this.props.auth.id)
+    {
+      this.props.getUserCart(this.props.auth.id)
+    }
   }
 
   render() {
@@ -34,11 +40,13 @@ export class AllShoes extends Component {
 const mapStateToProps = (reduxState) => {
   return {
     allShoes: reduxState.allShoesReducer,
+    auth: reduxState.auth
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   getShoes: () => dispatch(fetchShoes()),
+  getUserCart: (id) => dispatch(getUserCart(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllShoes);

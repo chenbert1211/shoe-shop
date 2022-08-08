@@ -50,7 +50,7 @@ export class SingleShoe extends Component {
     // console.log(this.props);
     const allShoes = this.props.allShoes;
     const {allSize} = this.state
-    console.log(this.state.size)
+    // console.log(this.state.size)
     return (
       <div id="single-shoe-view">
         <div id="shoe-detail-container">
@@ -101,7 +101,7 @@ export class SingleShoe extends Component {
 
 const mapStateToProps = (reduxState) => ({
   singleShoe: reduxState.singleShoeReducer,
-  allShoes: reduxState.allShoesReducer,
+  allShoes: reduxState.allShoesReducer
 });
 
 const mapDispatchToProps = (dispatch) => ({

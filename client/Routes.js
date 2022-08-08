@@ -7,6 +7,9 @@ import { me } from './store';
 import SingleShoe from './components/SingleShoe';
 import Cart from './components/Cart';
 import Account from './components/Account';
+import EditAccount from './components/EditAccount';
+import EditPayment from './components/EditPayment';
+import EditSec from './components/EditSec';
 
 /**
  * COMPONENT
@@ -29,6 +32,9 @@ class Routes extends Component {
             <Route path="/signup" component={Signup} />
             <Route path='/cart' component={Cart} />
             <Route path='/account' component={Account} />
+            <Route path='/editaccount' component={EditAccount} />
+            <Route path='/editpayment' component={EditPayment} />
+            <Route path='/editsecurity' component={EditSec} />
           </Switch>
         ) : (
           <Switch>
