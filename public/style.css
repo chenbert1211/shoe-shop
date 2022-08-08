@@ -171,6 +171,65 @@ form div {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+/* FILTER BAR (IN ALL SHOES) */
+
+#brand-filter {
+  margin-top: 20px;
+  height: 40px;
+  width: fit-content;
+}
+
+#brand-filter-content {
+  display: none;
+}
+
+#brand-filter-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content form {
+  display: none;
+}
+
+#brand-filter:hover + #brand-filter-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter:hover + #brand-filter-content form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content:hover {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content form:hover {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: fit-content;
+}
+
+#brand-filter-content a:hover {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: fit-content;
+  background-color: rgb(138, 137, 137);
+}
+
 /* SINGLE SHOE VIEW */
 
 #single-shoe-view {
@@ -283,7 +342,7 @@ form div {
   margin-right: 30%;
 }
 
-.selectedSize{
+.selectedSize {
   background-color: grey;
 }
 
