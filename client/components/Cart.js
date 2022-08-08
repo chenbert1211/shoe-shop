@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateUser } from '../store/auth';
+import { deleteFromCart } from '../store/redux/cart';
+import { getUserCart } from '../store/redux/cart';
 
 class Cart extends Component {
     constructor(props){
         super(props)
         // console.log(this.props)
+        this.deleteFromCart = this.deleteFromCart.bind(this)
     }
     
-    componentDidMount(){
+    async componentDidMount(){
+        if(!!this.props.auth.id)
+        {
+            // await this.props.getUserCart(this.props.auth.id)
+            await this.props.updateUser({id: this.props.auth.id,
+                cart: this.props.Cart
+            })         
+            // this.props.getUserCart(this.props.auth.id)
+        }
+    }
+    
+    async deleteFromCart(){
+        await this.props.deleteShoe(event.target.value)
         if(!!this.props.auth.id)
         {
             this.props.updateUser({id: this.props.auth.id,
                 cart: this.props.Cart
             })         
         }
-    }
+      }
     
     render(){
     const { Cart } = this.props
-    console.log(Cart)
+    // console.log(Cart)
         return (
         <div>
         <br/><br/><br/><br/>
@@ -29,6 +44,7 @@ class Cart extends Component {
            <img src={cart.product.imageUrl} />
            <h3>{cart.product.name}</h3>
            {cart.size}
+           <button onClick={this.deleteFromCart} value={cart.id}>delete</button>
            </div>)
         }): 'Cart is currently emtpy'}
         </div>)
@@ -43,7 +59,9 @@ const mapState = (state) => {
 };
 const mapDispatch = (dispatch) => (
     {
-  updateUser: (auth) => dispatch(updateUser(auth))
+getUserCart: (id) => dispatch(getUserCart(id)),
+  updateUser: (auth) => dispatch(updateUser(auth)),
+  deleteShoe: (id) => dispatch(deleteFromCart(id))
 })
 
 
