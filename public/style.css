@@ -171,6 +171,65 @@ form div {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+/* FILTER BAR (IN ALL SHOES) */
+
+#brand-filter {
+  margin-top: 20px;
+  height: 40px;
+  width: fit-content;
+}
+
+#brand-filter-content {
+  display: none;
+}
+
+#brand-filter-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content form {
+  display: none;
+}
+
+#brand-filter:hover + #brand-filter-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter:hover + #brand-filter-content form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content:hover {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content form:hover {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#brand-filter-content a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: fit-content;
+}
+
+#brand-filter-content a:hover {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: fit-content;
+  background-color: rgb(138, 137, 137);
+}
+
 /* SINGLE SHOE VIEW */
 
 #single-shoe-view {
@@ -283,7 +342,7 @@ form div {
   margin-right: 30%;
 }
 
-.selectedSize{
+.selectedSize {
   background-color: grey;
 }
 
@@ -364,4 +423,94 @@ form div {
   padding-top: 8px;
   font-size: 15px;
   font-weight: 300;
+}
+
+/* fieldset {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+legend {
+  font-size: 1.25em;
+  padding: 0 .25em;
+  color: #999;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+} */
+
+#edit_account_body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6);
+}
+
+#edit_account {
+  display: flex;
+  background: rgba(233, 230, 230, 0.8);
+  border-radius: 25px;
+  padding: 1.9em;
+}
+
+#edit_account .edit_account .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+#edit_account .input-box label.details {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#edit_account .input {
+  width: 300px;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 350;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+}
+
+#edit_account .submit-button,
+.cancel-button {
+  align-items: center;
+  background-color: rgb(12, 12, 12);
+  border: 2px solid rgb(6, 6, 6);
+  box-sizing: border-box;
+  color: rgb(242, 237, 237);
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 350;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+}
+
+#edit_account .submit-button:hover,
+.cancel-button:hover {
+  border-color: rgb(255, 255, 255);
 }
