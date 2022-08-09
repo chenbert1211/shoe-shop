@@ -446,8 +446,6 @@ label {
   margin-top: 1em;
 } */
 
-==========================
-
 /*EDIT ACCOUNT*/
 
 #edit_account_body {
@@ -472,7 +470,7 @@ label {
 }
 
 #edit_account .input-box label.details {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
@@ -543,7 +541,7 @@ label {
 }
 
 #edit_security .input-box label.details {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
@@ -614,7 +612,7 @@ label {
 }
 
 #edit_payment .input-box label.details {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
