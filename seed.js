@@ -76,6 +76,73 @@ const products = [
     brand: "Nike",
     quantity: 10,
   },
+  {
+    name: "Retro Desert Style",
+    size: 9,
+    imageUrl:
+      "https://cdn.flightclub.com/2200/TEMPLATE/299067/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    category: "M",
+    brand: "Nike",
+    quantity: 10,
+  },
+  {
+    name: "Off-white nike Black",
+    size: 9,
+    imageUrl:
+      "https://cdn.flightclub.com/2200/TEMPLATE/805926/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    category: "M",
+    brand: "Nike",
+    quantity: 10,
+  },
+  {
+    name: "Off-white and Black",
+    size: 6,
+    imageUrl:
+      "https://cdn.flightclub.com/2200/TEMPLATE/805971/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    category: "W",
+    brand: "Nike",
+    quantity: 10,
+  },
+  {
+    name: "Universty Gold",
+    size: 6,
+    imageUrl:
+      "https://cdn.flightclub.com/2200/TEMPLATE/155691/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    category: "M",
+    brand: "Nike",
+    quantity: 10,
+  },
+  {
+    name: "Soldier and Pine Green",
+    size: 9,
+    imageUrl:
+      "https://cdn.flightclub.com/2200/TEMPLATE/152361/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    category: "M",
+    brand: "Nike",
+    quantity: 10,
+  },
+  {
+    name: "Yeezy Boots Red",
+    size: 8,
+    imageUrl:
+      "https://cdn.flightclub.com/2200/TEMPLATE/317241/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    category: "M",
+    brand: "Nike",
+    quantity: 10,
+  },
+
 ];
 
 const users = [
