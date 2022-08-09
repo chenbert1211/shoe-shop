@@ -8,7 +8,6 @@ const {
 const products = [
   {
     name: "Air Jordan Bred 11s",
-    size: 8.5,
     imageUrl:
       "https://cdn.flightclub.com/2600/TEMPLATE/319254/1.jpg",
     description:
@@ -21,7 +20,6 @@ const products = [
   },
   {
     name: "Air Jordan 1",
-    size: 10,
     imageUrl:
       "https://cdn.flightclub.com/750/TEMPLATE/314576/1.jpg",
     description:
