@@ -446,7 +446,7 @@ label {
   margin-top: 1em;
 } */
 
-==========================
+
 
 /*EDIT ACCOUNT*/
 
@@ -820,4 +820,14 @@ label {
   margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 10px;
+}
+/*
+AUTHFORM - LOGIN FORM
+*/
+
+
+
+#authform-container {
+  position:absolute;
+  margin-top: 100px;
 }
