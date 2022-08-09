@@ -12,7 +12,7 @@ export const Home = (props) => {
   return (
     <div id="homepage">
       <img id="banner-pic" src="/banner-pic.webp" />
-      <div id="all-shoes">
+      <div id="all-shoes-container">
         <AllShoes />
       </div>
     </div>

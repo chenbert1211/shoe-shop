@@ -36,7 +36,6 @@ router.get('/me', async (req, res, next) => {
   }
 })
 
-
 router.put('/update', async (req, res, next) => {
   try{
   const name = req.body
@@ -51,4 +50,15 @@ router.put('/update', async (req, res, next) => {
     next(error)
   }
 })
-    
+
+
+router.delete('/delete', async (req, res, next) => {
+  try{
+  const id = req.body
+  const deleteAccount= await User.findByPk(id.id)
+    // console.log(deleteAccount)
+  res.send(await deleteAccount.destroy())
+  }catch(error){
+    next(error)
+  }
+})

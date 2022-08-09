@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { updateUser } from '../store/auth';
 import { deleteFromCart } from '../store/redux/cart';
 import { getUserCart } from '../store/redux/cart';
+import { Link } from 'react-router-dom';
 
 class Cart extends Component {
     constructor(props){
@@ -47,6 +48,9 @@ class Cart extends Component {
            <button onClick={this.deleteFromCart} value={cart.id}>delete</button>
            </div>)
         }): 'Cart is currently emtpy'}
+        <Link to='/checkout'>
+        <button>Checkout</button>
+        </Link>
         </div>)
     }
 }

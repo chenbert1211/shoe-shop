@@ -25,7 +25,6 @@ form div {
 
 #navbar {
   display: flex;
-  /* background-color: rgb(122, 21, 169); */
   height: 50px;
   justify-content: space-between;
   align-items: center;
@@ -140,6 +139,10 @@ form div {
 
 /* ALL SHOES (HOMEPAGE) */
 
+#all-shoes-container {
+  width: 100%;
+}
+
 #all-shoes-view {
   margin-left: 4%;
   margin-right: 4%;
@@ -176,7 +179,8 @@ form div {
 #brand-filter {
   margin-top: 20px;
   height: 40px;
-  width: fit-content;
+  width: 100%;
+  position: static;
 }
 
 #brand-filter-content {
@@ -253,7 +257,6 @@ form div {
   width: 600px;
   height: 500px;
   text-align: center;
-  /* background-color: blue; */
 }
 
 #size-grid {
@@ -261,7 +264,6 @@ form div {
   margin-left: 4%;
   width: 500px;
   height: 400px;
-  /* background-color: rgb(209, 101, 130); */
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -466,7 +468,7 @@ label {
 }
 
 #edit_account .input-box label.details {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
