@@ -50,11 +50,11 @@ class Cart extends Component {
                         <img src={cart.product.imageUrl} alt="" width="160px" />
                         <div className="content">
                           <h3>{cart.product.name}</h3>
-                          <h3>Size: {cart.size}</h3>
+                          <h4>Size: {cart.size}</h4>
                           <h4>Price: ${cart.price / 100}</h4>
                           <p className="unit">Quantity:{cart.quantity}</p>
                           <p className="btn-area">
-                            <i className="fa fa-trash"></i>
+                            <i></i>
                             <button
                               className="btn2"
                               onClick={this.deleteFromCart}
