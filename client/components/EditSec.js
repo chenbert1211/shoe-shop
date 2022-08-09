@@ -42,7 +42,7 @@ class EditSec extends React.Component {
     return (
       <div id="edit_security_body">
         <div className="edit_security_content">
-          <form onSubmit={this.handleSubmit}>
+          <form id="edit_security" onSubmit={this.handleSubmit}>
             <br></br>
             <br></br>
             <br></br>
@@ -50,38 +50,44 @@ class EditSec extends React.Component {
 
             <div className="edit_security">
               <h2>Username Password</h2>
-              <label>
-                Username
-                <input
-                  placeholder="Username"
-                  onChange={this.handleChange}
-                  className="input"
-                  name="username"
-                  value={username}
-                />
-              </label>
+              <div className="input-box">
+                <label className="details">
+                  Username
+                  <input
+                    placeholder="Username"
+                    onChange={this.handleChange}
+                    className="input"
+                    name="username"
+                    value={username}
+                  />
+                </label>
+              </div>
+
+              <br></br>
+
+              <div className="input-box">
+                <label className="details">
+                  Password
+                  <input
+                    placeholder="Password"
+                    onChange={this.handleChange}
+                    className="input"
+                    name="password"
+                    value={password}
+                  />
+                </label>
+              </div>
+              <br></br>
+
+              <div>
+                <input className="submit-button" type="submit" />
+              </div>
+              <div>
+                <Link to="/account">
+                  <button className="cancel-button">Cancel</button>
+                </Link>
+              </div>
             </div>
-
-            <br></br>
-
-            <div>
-              <label>
-                Password
-                <input
-                  placeholder="Password"
-                  onChange={this.handleChange}
-                  className="input"
-                  name="password"
-                  value={password}
-                />
-              </label>
-            </div>
-            <br></br>
-
-            <input type="submit" />
-            <Link to="/account">
-              <button>Cancel</button>
-            </Link>
           </form>
         </div>
       </div>

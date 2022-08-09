@@ -64,7 +64,7 @@ class EditAccount extends React.Component {
 
             <div className="edit_account">
               <h1>Account Information</h1>
-              <div class="input-box">
+              <div className="input-box">
                 <label className="details" for="first_name">
                   First Name
                   <input
