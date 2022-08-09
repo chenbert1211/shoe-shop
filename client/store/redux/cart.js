@@ -1,9 +1,15 @@
 import axios from 'axios';
-
-
+ 
 const ADD_CART = 'ADD_CART'
 
 const GET_CART = 'GET_CART'
+
+const DELETE_SHOE = 'DELETE_SHOE'
+
+const _deleteFromCart = (shoe) => ({
+  type: DELETE_SHOE,
+  shoe,
+});
 
 const _addToCart = (shoe) => ({
   type: ADD_CART,
@@ -15,9 +21,6 @@ const _getUserCart = (shoe) => ({
   shoe,
 });
 
-
-
-
 export const addToCart = (shoe) =>{
         return async(dispatch) =>{
           // console.log(shoe)
@@ -28,9 +31,12 @@ export const addToCart = (shoe) =>{
 export const getUserCart = (id) =>{
   return async(dispatch) => {
     const { data } = await axios.get(`api/users/${id}`)
-    console.log(data)
     dispatch(_getUserCart(data.cart))
   }
+}
+
+export const deleteFromCart = (id) =>{
+  return _deleteFromCart(id)
 }
 
 const initialState = [];
@@ -41,6 +47,9 @@ export default function cartReducer(state = initialState, action) {
       return [...state, action.shoe];
       case GET_CART:
       return [...action.shoe];
+      case DELETE_SHOE:
+      const filtered = state.filter(shoe => shoe.id != action.shoe)
+      return filtered;
     default:
       return state;
   }

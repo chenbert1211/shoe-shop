@@ -32,7 +32,7 @@ router.get("/", async (req, res, next) => {
 
 //POST
 //localhost/order/:userId
-router.post("/:userId", async(req,res,next) =>{
+router.post("/", async(req,res,next) =>{
   try {
     // console.log("id", req.params.id)
     const newOrder = await Order.create(req.body)
@@ -54,9 +54,6 @@ router.delete("/delete/:orderId", async(req, res, next) => {
     next(error)
   }
 })
-
-
-
 
 
 

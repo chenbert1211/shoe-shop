@@ -1,6 +1,6 @@
 import axios from 'axios'
 import history from '../history'
-
+import {getUserCart} from './redux/cart'
 const TOKEN = 'token'
 
 /**
@@ -31,6 +31,7 @@ export const me = () => async dispatch => {
         authorization: token
       }
     })
+    dispatch(getUserCart(res.data.id))
     return dispatch(setAuth(res.data))
   }
 }
@@ -63,6 +64,14 @@ export const updateUser = (auth) => {
         dispatch(updateAuth(data))
     })
 }
+
+export const deleteUser = (id) => {
+    return (async(dispatch) => {
+        await axios.delete('/auth/delete', {data:{id}})
+        return logout()
+    })
+}
+
 
 /**
  * REDUCER
