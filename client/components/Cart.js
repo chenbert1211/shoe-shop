@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { updateUser } from '../store/auth';
-import { deleteFromCart } from '../store/redux/cart';
-import { getUserCart } from '../store/redux/cart';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { updateUser } from "../store/auth";
+import { deleteFromCart } from "../store/redux/cart";
+import { getUserCart } from "../store/redux/cart";
+import { Link } from "react-router-dom";
 
 class Cart extends Component {
   constructor(props) {
@@ -34,28 +34,54 @@ class Cart extends Component {
     const { Cart } = this.props;
     // console.log(Cart)
     return (
-      <div>
+      <div id="cart">
         <br />
         <br />
         <br />
         <br />
-        {Cart.length > 0
-          ? Cart.map((cart) => {
-              return (
-                <div key={cart.id}>
-                  <img src={cart.product.imageUrl} />
-                  <h3>{cart.product.name}</h3>
-                  {cart.size}
-                  <button onClick={this.deleteFromCart} value={cart.id}>
-                    delete
-                  </button>
-                </div>
-              );
-            })
-          : 'Cart is currently emtpy'}
-        <Link to="/checkout">
-          <button>Checkout</button>
-        </Link>
+        <div id="cart_wrapper" className="wrapper">
+          <h1>Cart</h1>
+          <div className="project">
+            <div className="shop">
+              {Cart.length > 0
+                ? Cart.map((cart) => {
+                    return (
+                      <div className="box" key={cart.id}>
+                        <img src={cart.product.imageUrl} alt="" width="160px" />
+                        <div className="content">
+                          <h3>{cart.product.name}</h3>
+                          <h3>Size: {cart.size}</h3>
+                          <h4>Price: ${cart.price / 100}</h4>
+                          <p className="unit">Quantity:{cart.quantity}</p>
+                          <p className="btn-area">
+                            <i className="fa fa-trash"></i>
+                            <button
+                              className="btn2"
+                              onClick={this.deleteFromCart}
+                              value={cart.id}
+                            >
+                              delete
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })
+                : "Cart is currently emtpy"}
+            </div>
+            <div className="right-bar">
+              <p>
+                <span>Subtotal</span>
+                <span>Temporary Total: X</span>
+              </p>
+              <div>
+                <Link to="/checkout">
+                  <button className="checkout-button">Checkout</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

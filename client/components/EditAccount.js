@@ -1,37 +1,31 @@
 import React from "react";
+import axios from "axios";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { updateUser, deleteUser } from "../store/auth";
 
-import axios from 'axios';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { updateUser, deleteUser } from '../store/auth';
+class EditAccount extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: this.props.auth.id,
+      firstName: null,
+      lastName: null,
+      imageUrl: null,
+      phoneNumber: null,
+      email: null,
+    };
 
-class EditAccount extends React.Component{
-constructor(props){
-    super(props)
-     this.state = {
-        id: this.props.auth.id,
-        firstName: null,
-        lastName: null,
-        imageUrl: null,
-        phoneNumber: null,
-        email: null
-        }
-
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.deleteAccount = this.deleteAccount.bind(this)
-}
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteAccount = this.deleteAccount.bind(this);
+  }
 
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
     });
   }
-
-deleteAccount(){
-    // console.log(this.props)
-   this.props.deleteUser(this.state.id)
-}
 
   handleSubmit(event) {
     event.preventDefault();
@@ -49,7 +43,12 @@ deleteAccount(){
     });
   }
 
-  render() {
+  deleteAccount() {
+    // console.log(this.props)
+    this.props.deleteUser(this.state.id);
+  }
+
+    render() {
     const { firstName, lastName, imageUrl, phoneNumber, email } = this.state;
     // console.log(this.state)
     return (
@@ -65,7 +64,7 @@ deleteAccount(){
 
             <div className="edit_account">
               <h1>Account Information</h1>
-              <div class="input-box">
+              <div className="input-box">
                 <label className="details" for="first_name">
                   First Name
                   <input
@@ -143,7 +142,6 @@ deleteAccount(){
                 <Link to="/account">
                   <button className="cancel-button">Cancel</button>
                 </Link>
-                <Link to='/account'><button >Cancel</button></Link>
               </div>
             </div>
           </form>
@@ -160,12 +158,10 @@ const mapState = (state) => {
   };
 };
 
-
-const mapDispatch = (dispatch) => (
-    {
+const mapDispatch = (dispatch) => ({
   updateUser: (auth) => dispatch(updateUser(auth)),
-  deleteUser: (id) => dispatch(deleteUser(id))
-})
+  deleteUser: (id) => dispatch(deleteUser(id)),
+});
 
 export default connect(mapState, mapDispatch)(EditAccount);
 
