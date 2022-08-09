@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateUser } from "../store/auth";
+import { updateUser, deleteUser } from "../store/auth";
 
 class EditAccount extends React.Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class EditAccount extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteAccount = this.deleteAccount.bind(this);
   }
 
   handleChange(event) {
@@ -40,6 +41,11 @@ class EditAccount extends React.Component {
       phoneNumber: auth.phoneNumber,
       email: auth.email,
     });
+  }
+
+  deleteAccount() {
+    // console.log(this.props)
+    this.props.deleteUser(this.state.id);
   }
 
   render() {
@@ -154,6 +160,7 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => ({
   updateUser: (auth) => dispatch(updateUser(auth)),
+  deleteUser: (id) => dispatch(deleteUser(id)),
 });
 
 export default connect(mapState, mapDispatch)(EditAccount);
