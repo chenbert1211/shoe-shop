@@ -10,6 +10,7 @@ import Account from './components/Account';
 import EditAccount from './components/EditAccount';
 import EditPayment from './components/EditPayment';
 import EditSec from './components/EditSec';
+import Checkout from './components/Checkout';
 
 /**
  * COMPONENT
@@ -21,7 +22,7 @@ class Routes extends Component {
 
   render() {
     const { isLoggedIn } = this.props;
-// console.log(isLoggedIn)
+    // console.log(isLoggedIn)
     return (
       <div>
         {isLoggedIn ? (
@@ -30,11 +31,12 @@ class Routes extends Component {
             <Route path="/product/:id" component={SingleShoe} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
-            <Route path='/cart' component={Cart} />
-            <Route path='/account' component={Account} />
-            <Route path='/editaccount' component={EditAccount} />
-            <Route path='/editpayment' component={EditPayment} />
-            <Route path='/editsecurity' component={EditSec} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/account" component={Account} />
+            <Route path="/editaccount" component={EditAccount} />
+            <Route path="/editpayment" component={EditPayment} />
+            <Route path="/editsecurity" component={EditSec} />
+            <Route path="/checkout" component={Checkout} />
           </Switch>
         ) : (
           <Switch>
@@ -42,7 +44,8 @@ class Routes extends Component {
             <Route path="/product/:id" component={SingleShoe} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
-            <Route path='/cart' component={Cart} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
           </Switch>
         )}
       </div>
