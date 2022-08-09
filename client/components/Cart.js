@@ -50,7 +50,8 @@ class Cart extends Component {
                         <img src={cart.product.imageUrl} alt="" width="160px" />
                         <div className="content">
                           <h3>{cart.product.name}</h3>
-                          <h4>${cart.price / 100}</h4>
+                          <h3>Size: {cart.size}</h3>
+                          <h4>Price: ${cart.price / 100}</h4>
                           <p className="unit">Quantity:{cart.quantity}</p>
                           <p className="btn-area">
                             <i className="fa fa-trash"></i>
@@ -71,13 +72,15 @@ class Cart extends Component {
             <div className="right-bar">
               <p>
                 <span>Subtotal</span>
-                <span>Temporary Total: $100</span>
+                <span>Temporary Total: X</span>
               </p>
+              <div>
+                <Link to="/checkout">
+                  <button className="checkout-button">Checkout</button>
+                </Link>
+              </div>
             </div>
           </div>
-          <Link to="/checkout">
-            <button>Checkout</button>
-          </Link>
         </div>
       </div>
     );
