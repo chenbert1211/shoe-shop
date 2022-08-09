@@ -2,22 +2,75 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchShoes } from '../store/redux/allShoes';
-import { getUserCart } from '../store/redux/cart';
-
 
 export class AllShoes extends Component {
+  constructor() {
+    super();
+    this.state = {
+      brand: 'all',
+    };
+    this.clickHandler = this.clickHandler.bind(this);
+    this.clearFilter = this.clearFilter.bind(this);
+  }
   componentDidMount() {
     this.props.getShoes();
   }
 
+  clickHandler(event) {
+    const target = event.target.innerHTML;
+    this.setState({
+      brand: `${target}`,
+    });
+  }
+
+  clearFilter() {
+    this.setState({ brand: 'all' });
+  }
+
   render() {
     const allShoes = this.props.allShoes;
-    // console.log(this.props)
+    console.log(allShoes);
+    const { clickHandler, clearFilter } = this;
+    const filteredArr = allShoes.filter((shoe) => {
+      if (this.state.brand === 'all') {
+        return shoe;
+      } else if (shoe.name === this.state.brand) {
+        return shoe;
+      }
+    });
     return (
       <div id="all-shoes-view">
-        <h1>All Shoes</h1>
+        {/* FILTER BAR */}
+        <div id="filter-bar">
+          <div id="brand-filter">
+            <a>Filter By</a>
+          </div>
+
+          <div id="brand-filter-content">
+            <form>
+              {allShoes.map((shoe) => {
+                return (
+                  <a
+                    key={shoe.id}
+                    onClick={() => {
+                      console.log(filteredArr);
+                      clickHandler(event);
+                    }}
+                  >
+                    {shoe.name}
+                  </a>
+                );
+              })}
+              <button type="button" onClick={clearFilter}>
+                Clear Filters
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* FILTER BAR */}
         <div id="product-view">
-          {allShoes.map((shoe) => {
+          {filteredArr.map((shoe) => {
             return (
               <Link key={shoe.id} to={`/product/${shoe.id}`}>
                 <div className="product">
@@ -36,13 +89,11 @@ export class AllShoes extends Component {
 const mapStateToProps = (reduxState) => {
   return {
     allShoes: reduxState.allShoesReducer,
-    auth: reduxState.auth
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   getShoes: () => dispatch(fetchShoes()),
-  getUserCart: (id) => dispatch(getUserCart(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllShoes);

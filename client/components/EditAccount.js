@@ -48,7 +48,7 @@ class EditAccount extends React.Component {
     this.props.deleteUser(this.state.id);
   }
 
-  render() {
+    render() {
     const { firstName, lastName, imageUrl, phoneNumber, email } = this.state;
     // console.log(this.state)
     return (
@@ -164,3 +164,4 @@ const mapDispatch = (dispatch) => ({
 });
 
 export default connect(mapState, mapDispatch)(EditAccount);
+
