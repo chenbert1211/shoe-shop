@@ -190,8 +190,8 @@ const mapState = (state) => {
   };
 };
 
-const mapDispatch = (dispatch) => ({
-  updateUser: (auth) => dispatch(updateUser(auth)),
+const mapDispatch = (dispatch, { history }) => ({
+  updateUser: (auth) => dispatch(updateUser(auth, history)),
 });
 
 export default connect(mapState, mapDispatch)(EditPayment);

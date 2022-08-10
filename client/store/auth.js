@@ -59,11 +59,10 @@ export const logout = () => {
   };
 };
 
-export const updateUser = (auth) => {
-  return async (dispatch) => {
-    const { data } = await axios.put('/auth/update', auth);
-    dispatch(updateAuth(data));
-  };
+export const updateUser = (auth, history) => async (dispatch) => {
+  const { data } = await axios.put('/auth/update', auth);
+  dispatch(updateAuth(data));
+  history.push('/account');
 };
 
 export const deleteUser = (id) => {
