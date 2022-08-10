@@ -76,6 +76,12 @@ form div {
   border-radius: 50%;
 }
 
+.profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
 #left-nav-buttons {
   display: flex;
   flex-direction: row-reverse;

@@ -6,6 +6,8 @@ const GET_CART = 'GET_CART';
 
 const DELETE_SHOE = 'DELETE_SHOE';
 
+const FINISH_CHECKOUT = 'FINISH_CHECKOUT';
+
 const _deleteFromCart = (shoe) => ({
   type: DELETE_SHOE,
   shoe,
@@ -26,6 +28,10 @@ const _changeQty = (shoe) => ({
   shoe,
 });
 
+const _finishCheckout = () => ({
+  type: FINISH_CHECKOUT,
+});
+
 export const addToCart = (shoe) => {
   return async (dispatch) => {
     const { data } = await axios.get(`/api/order_product/${shoe}`);
@@ -37,6 +43,12 @@ export const getUserCart = (id) => {
   return async (dispatch) => {
     const { data } = await axios.get(`api/users/${id}`);
     dispatch(_getUserCart(data.cart));
+  };
+};
+
+export const finishCheckout = () => {
+  return function (dispatch) {
+    dispatch(_finishCheckout());
   };
 };
 
@@ -65,6 +77,8 @@ export default function cartReducer(state = initialState, action) {
     case DELETE_SHOE:
       const filtered = state.filter((shoe) => shoe.id != action.shoe);
       return filtered;
+    case FINISH_CHECKOUT:
+      return [];
     default:
       return state;
   }

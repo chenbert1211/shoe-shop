@@ -275,6 +275,7 @@ const users = [
     creditCard: '1234567890123456',
     address: '200 Lake Rd',
     phoneNumber: '6504424444',
+    isAdmin: true,
   },
   {
     username: 'Bert',
@@ -285,6 +286,7 @@ const users = [
     creditCard: '1234567890123457',
     address: '300 Lake Rd',
     phoneNumber: '6504424455',
+    isAdmin: true,
   },
   {
     username: 'Cole',
@@ -295,6 +297,7 @@ const users = [
     creditCard: '1234567890123458',
     address: '400 Lake Rd',
     phoneNumber: '6504424466',
+    isAdmin: true,
   },
   {
     username: 'Emre',
@@ -305,6 +308,7 @@ const users = [
     creditCard: '1234567890123459',
     address: '500 Lake Rd',
     phoneNumber: '6504424477',
+    isAdmin: true,
   },
 ];
 

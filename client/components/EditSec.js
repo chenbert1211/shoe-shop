@@ -68,6 +68,7 @@ class EditSec extends React.Component {
                 <label className="details">
                   Password
                   <input
+                    type="password"
                     placeholder="Password"
                     onChange={this.handleChange}
                     className="input"
@@ -100,8 +101,8 @@ const mapState = (state) => {
   };
 };
 
-const mapDispatch = (dispatch) => ({
-  updateUser: (auth) => dispatch(updateUser(auth)),
+const mapDispatch = (dispatch, { history }) => ({
+  updateUser: (auth) => dispatch(updateUser(auth, history)),
 });
 
 export default connect(mapState, mapDispatch)(EditSec);
