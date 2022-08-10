@@ -7,7 +7,6 @@ const Navbar = ({ handleClick, isLoggedIn, auth }) => (
   <div>
     <nav>
       <div id="navbar">
-        {/* <input id="searchbar" type="text" placeholder="Search"></input> */}
         <Link to="/cart">
           <img id="cart-icon" src="/cart-icon.png" />
         </Link>
@@ -21,7 +20,7 @@ const Navbar = ({ handleClick, isLoggedIn, auth }) => (
               <div id="user-icon"></div>
               <div id="user-container-dropdown">
                 <Link to="/account">
-                  <a>Account</a>
+                  <a id="account-dropdown">Account</a>
                 </Link>
                 <a onClick={handleClick}>Logout</a>
               </div>
@@ -50,7 +49,6 @@ const Navbar = ({ handleClick, isLoggedIn, auth }) => (
  * CONTAINER
  */
 const mapState = (state) => {
-  // console.log(state)
   return {
     isLoggedIn: !!state.auth.id,
     auth: state.auth,

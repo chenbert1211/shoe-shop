@@ -5,19 +5,18 @@ import { connect } from 'react-redux';
 class Reciept extends Component {
   constructor(props) {
     super(props);
-}
+  }
 
-  
   render() {
     return (
-      <div >
-       reciept number: {this.props.order.recieptNumer}
+      <div id="reciept-number-container">
+        <div id="thanks">
+          Thank you for your order, <br />
+          We appreciate your business, come back soon! <br />
+          Here is your order confermation number:
+        </div>
+        <div id="reciept-number">{this.props.order.recieptNumer}</div>
       </div>
-
-      // <div>
-      // <br/><br/><br/><br/><br/>
-      // This is checkout
-      // </div>
     );
   }
 }
@@ -25,7 +24,7 @@ class Reciept extends Component {
 const mapState = (state) => {
   return {
     order: state.orderReducer.currentOrder,
-    user: state.auth
+    user: state.auth,
   };
 };
 

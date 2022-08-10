@@ -1,16 +1,16 @@
-import React from "react";
-import axios from "axios";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { updateUser } from "../store/auth";
+import React from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { updateUser } from '../store/auth';
 
 class EditSec extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: this.props.auth.id,
-      username: "",
-      password: "",
+      username: '',
+      password: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -38,7 +38,6 @@ class EditSec extends React.Component {
 
   render() {
     const { username, password } = this.state;
-    // console.log(this.state)
     return (
       <div id="edit_security_body">
         <div className="edit_security_content">
@@ -96,7 +95,6 @@ class EditSec extends React.Component {
 }
 
 const mapState = (state) => {
-  // console.log(state)
   return {
     auth: state.auth,
   };

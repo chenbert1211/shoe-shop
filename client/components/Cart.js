@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 class Cart extends Component {
   constructor(props) {
     super(props);
-    // console.log(this.props)
     this.deleteFromCart = this.deleteFromCart.bind(this);
     this.createOrder = this.createOrder.bind(this);
     this.changeQtiy = this.changeQtiy.bind(this);
@@ -36,7 +35,6 @@ class Cart extends Component {
   createOrder() {
     const cartShoe = this.props.Cart;
 
-    // console.log(cartShoeIds, this.props.auth.id)
     this.props.createOrder({
       userId: this.props.auth.id,
       orderPrducts: cartShoe,
@@ -57,7 +55,7 @@ class Cart extends Component {
   render() {
     const { Cart } = this.props;
     let subtotal = 0;
-    // console.log(Cart)
+
     return (
       <div id="cart">
         <br />

@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-const ADD_CART = "ADD_CART";
+const ADD_CART = 'ADD_CART';
 
-const GET_CART = "GET_CART";
+const GET_CART = 'GET_CART';
 
-const DELETE_SHOE = "DELETE_SHOE";
+const DELETE_SHOE = 'DELETE_SHOE';
 
 const _deleteFromCart = (shoe) => ({
   type: DELETE_SHOE,
@@ -22,13 +22,12 @@ const _getUserCart = (shoe) => ({
 });
 
 const _changeQty = (shoe) => ({
-  type: "CHANGEQTY",
+  type: 'CHANGEQTY',
   shoe,
 });
 
 export const addToCart = (shoe) => {
   return async (dispatch) => {
-    // console.log(shoe)
     const { data } = await axios.get(`/api/order_product/${shoe}`);
     dispatch(_addToCart(data));
   };
@@ -45,7 +44,6 @@ export const deleteFromCart = (id) => {
   return _deleteFromCart(id);
 };
 export const changeQty = (id) => {
-  console.log(id);
   return _changeQty(id);
 };
 const initialState = [];
@@ -61,7 +59,7 @@ export default function cartReducer(state = initialState, action) {
       }
     case GET_CART:
       return [...action.shoe];
-    case "CHANGEQTY":
+    case 'CHANGEQTY':
       const filterQty = state.filter((shoe) => shoe.id != action.shoe.id);
       return [action.shoe, ...filterQty];
     case DELETE_SHOE:

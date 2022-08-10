@@ -1,10 +1,10 @@
-const router = require("express").Router();
-const e = require("express");
+const router = require('express').Router();
+const e = require('express');
 const {
   models: { Order_Product, Product },
-} = require("../db");
+} = require('../db');
 
-router.get("/", async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const order_product = await Order_Product.findAll();
     res.json(order_product);
@@ -13,11 +13,13 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:id", async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   const id = req.params.id;
-  console.log(id)
+
   try {
-    const order_product = await Order_Product.findByPk(id, {include: Product});
+    const order_product = await Order_Product.findByPk(id, {
+      include: Product,
+    });
     if (order_product) {
       res.send(order_product);
     } else {
@@ -28,11 +30,9 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
-    const order_product = 
-    // const order_product = await Order_Product.findAll();
-    res.json(order_product);
+    const order_product = res.json(order_product);
   } catch (err) {
     next(err);
   }

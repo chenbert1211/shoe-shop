@@ -45,7 +45,6 @@ class Account extends Component {
 }
 
 const mapState = (state) => {
-  // console.log(state)
   return {
     auth: state.auth,
   };

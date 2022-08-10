@@ -90,10 +90,12 @@ form div {
 #user-container-dropdown {
   display: none;
   position: absolute;
-  top: 55px;
+  top: 70px;
   background-color: transparent;
   width: 118px;
   z-index: 1;
+  right: 10px;
+  font-weight: bold;
 }
 
 #user-container-dropdown a {
@@ -101,26 +103,15 @@ form div {
   text-decoration: none;
   display: block;
   margin-top: 20px;
+  text-align: center;
 }
 
 #user-container-dropdown a:hover {
   background-color: #ddd;
 }
 
-/* @keyframes slideDown {
-  from {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(58px);
-    opacity: 1;
-  }
-} */
-
 #user-container:hover #user-container-dropdown {
   display: block;
-  /* animation-name: slideDown; */
 }
 
 /* HOMEPAGE */
@@ -427,25 +418,6 @@ form div {
   font-size: 15px;
   font-weight: 300;
 }
-
-/* fieldset {
-  margin: 2em 0;
-  padding: 1em 2em;
-  border: solid 1px #ccc;
-  border-radius: 6px;
-  min-width: 200px;
-}
-
-legend {
-  font-size: 1.25em;
-  padding: 0 .25em;
-  color: #999;
-}
-
-label {
-  display: block;
-  margin-top: 1em;
-} */
 
 /*EDIT ACCOUNT*/
 
@@ -828,10 +800,6 @@ label {
   margin-right: 10px;
 }
 
-#checkout-item-label {
-  font-weight: bolder;
-}
-
 #checkout-item-seperator {
   height: 0.5px;
   width: 100%;
@@ -883,7 +851,7 @@ label {
 
 #confirm-checkout-button {
   margin-top: 30px;
-  /* margin-bottom: 30px; */
+
   align-items: center;
   background: #06f;
   border: none;
@@ -896,14 +864,11 @@ label {
   justify-content: center;
   text-align: center;
   border-radius: 20px;
-  /* margin-left: 56.7%; */
-  /* margin-right: 30%; */
   transition: background 200ms ease-in;
 }
 
 #confirm-checkout-button:hover {
   margin-top: 30px;
-  /* margin-bottom: 30px; */
   align-items: center;
   background: rgb(202, 61, 48);
   border: none;
@@ -916,20 +881,25 @@ label {
   justify-content: center;
   text-align: center;
   border-radius: 20px;
-  /* margin-left: 56.7%; */
-  /* margin-right: 30%; */
 }
 
 #checkout-user-info div {
   margin: 5px;
 }
 
-
 .guest-checkout-input-field {
   padding: 15px;
 }
 
+#total-price {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: larger;
+}
 
+.item-price-text {
+  font-weight: bold;
+}
 
 /*
 AUTHFORM - LOGIN FORM
@@ -940,9 +910,7 @@ AUTHFORM - LOGIN FORM
   padding: 0;
   box-sizing: border-box;
 
-
   align-items: center;
-
 }
 
 #authform-container .form-container {
@@ -951,16 +919,13 @@ AUTHFORM - LOGIN FORM
   width: 800px;
   margin: 0 auto;
 
-  border:1px solid black;
+  border: 1px solid black;
   font-family: montserrat;
   position: absolute;
   top: 200px;
-  left:39%;
+  left: 22.5%;
   border-radius: 20px;
   box-shadow: 5px 10px #888888;
-
-
-
 }
 #authform-container #autform {
   display: flex;
@@ -970,7 +935,6 @@ AUTHFORM - LOGIN FORM
   width: 100%;
   padding: 1.9em;
   align-items: center;
-
 }
 
 #autform h1 {
@@ -986,7 +950,6 @@ AUTHFORM - LOGIN FORM
   border: 1px solid black;
   outline: none;
   border-radius: 20px;
-
 }
 
 #submit_form {
@@ -995,7 +958,6 @@ AUTHFORM - LOGIN FORM
 }
 
 #autform .button-form {
-
   align-items: center;
   background-color: rgb(12, 12, 12);
   border: 2px solid rgb(6, 6, 6);
@@ -1047,32 +1009,63 @@ ACCOUNT PAGE
   padding: 10px;
   background: linear-gradient(135deg, #71b7e6);
   box-shadow: 5px 10px #888888;
-
-
 }
-#account_container  .wrapper-container{
+#account_container .wrapper-container {
   display: flex;
   flex-direction: column;
   background: rgba(233, 230, 230, 0.8);
   border-radius: 25px;
   padding: 1.9em;
+  margin-right: 1%;
 }
 
-
-.button_account  {
+.button_account {
   align-items: center;
-    background-color: rgb(12, 12, 12);
-    border: 2px solid rgb(6, 6, 6);
-    box-sizing: border-box;
-    color: rgb(242, 237, 237);
-    cursor: pointer;
-    display: inline-flex;
-    fill: #000;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 350;
-    justify-content: center;
-    letter-spacing: -0.8px;
-    line-height: 24px;
-    min-width: 140px;
+  background-color: rgb(12, 12, 12);
+  border: 2px solid rgb(6, 6, 6);
+  box-sizing: border-box;
+  color: rgb(242, 237, 237);
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 350;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+}
+
+.wrapper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* RECEIPT */
+
+#reciept-number-container {
+  margin-top: 20%;
+  margin-left: 19%;
+  position: absolute;
+  text-align: center;
+}
+
+#thanks {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#reciept-number {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(100, 99, 99);
 }
