@@ -33,10 +33,8 @@ class Cart extends Component {
     }
   }
 
-
-  createOrder()
-  {
-    const cartShoe = this.props.Cart
+  createOrder() {
+    const cartShoe = this.props.Cart;
 
     // console.log(cartShoeIds, this.props.auth.id)
     this.props.createOrder({
@@ -58,6 +56,7 @@ class Cart extends Component {
 
   render() {
     const { Cart } = this.props;
+    let subtotal = 0;
     // console.log(Cart)
     return (
       <div id="cart">
@@ -71,6 +70,7 @@ class Cart extends Component {
             <div className="shop">
               {Cart.length > 0
                 ? Cart.map((cart) => {
+                    subtotal += cart.price * cart.quantity;
                     return (
                       <div className="box" key={cart.id}>
                         <img src={cart.product.imageUrl} alt="" width="160px" />
@@ -110,8 +110,7 @@ class Cart extends Component {
             </div>
             <div className="right-bar">
               <p>
-                <span>Subtotal</span>
-                <span>Temporary Total: X</span>
+                <span>Subtotal: ${subtotal / 100}</span>
               </p>
               <div>
                 <Link to="/checkout">
