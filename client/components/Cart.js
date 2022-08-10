@@ -33,8 +33,11 @@ class Cart extends Component {
     }
   }
 
-  createOrder() {
-    const cartShoe = this.props.Cart;
+
+  createOrder()
+  {
+    const cartShoe = this.props.Cart
+
     // console.log(cartShoeIds, this.props.auth.id)
     this.props.createOrder({
       userId: this.props.auth.id,
