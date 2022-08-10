@@ -7,6 +7,10 @@ const {
   models: { Product, User, Order_Product },
 } = require("./server/db");
 
+
+/***********************
+ PRODUCTS DATA
+***************************/
 const products = [
 
   {
@@ -187,6 +191,10 @@ const products = [
   },
 ];
 
+/***********************
+ USERS DATA
+***************************/
+
 const users = [
 
   {
@@ -232,9 +240,9 @@ const users = [
 ];
 
 
-/**********
+/***********************
  MEN ORDER_PRODUCTS
-**********/
+***************************/
 const menSize_orderProducts = [
   {
 
@@ -338,9 +346,15 @@ const menSize_orderProducts = [
 
 
 
-/**********
+
+
+
+
+
+
+/********************
  WOMEN ORDER_PRODUCTS
-**********/
+**********************/
 
 const womenSize_orderProducts = [
   {
