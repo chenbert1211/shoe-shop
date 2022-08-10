@@ -2,7 +2,6 @@ const Sequelize = require("sequelize");
 const db = require("../db");
 
 const Order = db.define("order", {
-  type: Sequelize.STRING,
   status: {
     // type: Sequelize.ENUM("open", "closed"),
     type:Sequelize.STRING,
@@ -11,7 +10,16 @@ const Order = db.define("order", {
       notEmpty: false,
     },
   },
+    orderPrducts:{
+     type: Sequelize.ARRAY(Sequelize.JSON),
+            defaultValue: []
+  },
+  recieptNumer: {
+    type: Sequelize.STRING
+  }
 },
+
+
 {timestamps:false}
 
 );

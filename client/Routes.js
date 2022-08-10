@@ -11,7 +11,7 @@ import EditAccount from './components/EditAccount';
 import EditPayment from './components/EditPayment';
 import EditSec from './components/EditSec';
 import Checkout from './components/Checkout';
-
+import Receipt from './components/Receipt';
 /**
  * COMPONENT
  */
@@ -37,6 +37,7 @@ class Routes extends Component {
             <Route path="/editpayment" component={EditPayment} />
             <Route path="/editsecurity" component={EditSec} />
             <Route path="/checkout" component={Checkout} />
+            <Route path="/reciept" component={Receipt} />
           </Switch>
         ) : (
           <Switch>
@@ -46,6 +47,7 @@ class Routes extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
+            <Route path="/reciept" component={Receipt} />
           </Switch>
         )}
       </div>
