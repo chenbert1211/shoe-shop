@@ -1,8 +1,8 @@
-import React from "react";
-import axios from "axios";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { updateUser, deleteUser } from "../store/auth";
+import React from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { updateUser, deleteUser } from '../store/auth';
 
 class EditAccount extends React.Component {
   constructor(props) {
@@ -44,13 +44,12 @@ class EditAccount extends React.Component {
   }
 
   deleteAccount() {
-    // console.log(this.props)
     this.props.deleteUser(this.state.id);
   }
 
-    render() {
+  render() {
     const { firstName, lastName, imageUrl, phoneNumber, email } = this.state;
-    // console.log(this.state)
+
     return (
       <div id="edit_account_body">
         <div class="edit_account_content">
@@ -152,7 +151,6 @@ class EditAccount extends React.Component {
 }
 
 const mapState = (state) => {
-  // console.log(state)
   return {
     auth: state.auth,
   };
@@ -164,4 +162,3 @@ const mapDispatch = (dispatch) => ({
 });
 
 export default connect(mapState, mapDispatch)(EditAccount);
-

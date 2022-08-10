@@ -125,24 +125,22 @@ class Checkout extends Component {
 
   async componentDidMount() {
     if (this.props.auth.id) {
-      // await this.props.getUserCart(this.props.auth.id);
       await this.props.updateUser({
         id: this.props.auth.id,
         cart: this.props.Cart,
       });
-      // const cartArray = this.props.Cart;
     }
   }
 
   render() {
-    // const cartArray = this.props.auth.cart;
     const cartArray = this.props.Cart;
     const user = this.props.auth;
     const cardNumArr =
       typeof user.creditCard === 'string' ? user.creditCard.split('') : '';
 
     const lastFourNums = `${cardNumArr[15]}${cardNumArr[16]}${cardNumArr[17]}${cardNumArr[18]} `;
-    console.log('user', user);
+    let subtotal = 0;
+
     return (
       <div id="checkout-outmost">
         <div id="checkout-items-outmost">
@@ -151,10 +149,14 @@ class Checkout extends Component {
               <div id="product-info-checkout">
                 <div className="checkout-payment-title">Items In Your Cart</div>
                 {cartArray?.map((cartItem, idx) => {
+                  subtotal += cartItem.price * cartItem.quantity;
                   if (idx !== cartArray.length - 1) {
                     return (
                       <div key={cartItem.id} id="checkout-item">
-                        <div id="checkout-item-label">Item {idx + 1}</div>
+                        <div id="checkout-item-price">
+                          <span className="item-price-text">Price: </span>$
+                          {(cartItem.price * parseInt(cartItem.quantity)) / 100}
+                        </div>
                         <img
                           src={cartItem.product.imageUrl}
                           id="checkout-image"
@@ -170,7 +172,10 @@ class Checkout extends Component {
                   } else {
                     return (
                       <div key={cartItem.id} id="checkout-item">
-                        <div id="checkout-item-label">Item {idx + 1}</div>
+                        <div id="checkout-item-price">
+                          <span className="item-price-text">Price: </span>$
+                          {(cartItem.price * parseInt(cartItem.quantity)) / 100}
+                        </div>
                         <img
                           src={cartItem.product.imageUrl}
                           id="checkout-image"
@@ -179,6 +184,9 @@ class Checkout extends Component {
                         <div>
                           <span id="item-size-text">Size</span> {cartItem.size}-
                           {cartItem.category}
+                        </div>
+                        <div id="total-price">
+                          Subtotal: <span>${subtotal / 100}</span>
                         </div>
                       </div>
                     );
@@ -189,34 +197,6 @@ class Checkout extends Component {
           </div>
         </div>
         {this.isLoggedIn()}
-        {/* <div id="checkout-user-info">
-          <div className="checkout-payment-title">
-            Payment & Shipping Information
-          </div>
-          <div className="payment-shipping-title">Shipping Address</div>
-          <div>
-            {user.address}, {user.city}, {user.state} {user.zipCode}
-          </div>
-          <div>
-            <div className="payment-shipping-title">Card Number</div>
-            ...............{lastFourNums}
-          </div>
-          <div className="payment-shipping-title">Card Expiration</div>
-          <div>{user.CardExp}</div>
-          <div className="payment-shipping-title">Name On Card</div>
-          <div>
-            {user.nameOnCard} {user.lastName}
-          </div>
-          <Link to="/reciept">
-            <button
-              onClick={this.completedOrder}
-              id="confirm-checkout-button"
-              type="button"
-            >
-              Confirm and Checkout
-            </button>
-          </Link>
-        </div> */}
       </div>
     );
   }
