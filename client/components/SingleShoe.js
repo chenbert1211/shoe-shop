@@ -46,6 +46,8 @@ export class SingleShoe extends Component {
     const allShoes = this.props.allShoes;
     const { allSize } = this.state;
 
+    allSize.sort((a, b) => a.size - b.size);
+
     return (
       <div id="single-shoe-view">
         <div id="shoe-detail-container">
