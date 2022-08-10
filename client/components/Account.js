@@ -8,6 +8,7 @@ class Account extends Component {
   }
 
   render() {
+    const { auth } = this.props;
     return (
       <div id="account_container">
         <br />
@@ -17,28 +18,63 @@ class Account extends Component {
         <br />
         <br />
         <br />
-        <div className="wrapper-container">
-          <div className="container_box">
-            <h2>Account</h2>
-            <Link to="/editaccount">
-              <button className="button_account">Edit</button>
-            </Link>
+        {auth.isAdmin == true ? (
+          <div className="wrapper-container">
+            <div className="container_box">
+              <h2>Account</h2>
+              <Link to="/editaccount">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
+            <div className="container_box">
+              <h2>Security</h2>
+              <Link to="/editsecurity">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
+            <div className="container_box">
+              <h2>Payment Information</h2>
+              <Link to="/editpayment">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
+            <div className="container_box">
+              <h2>Edit Inventory</h2>
+              <Link to="/editinventory">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
+            <div className="container_box">
+              <h2>See all users</h2>
+              <Link to="/seeusers">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
           </div>
-          <div className="container_box">
-            <br />
-            <h2>Security</h2>
-            <Link to="/editsecurity">
-              <button className="button_account">Edit</button>
-            </Link>
+        ) : (
+          <div className="wrapper-container">
+            <div className="container_box">
+              <h2>Account</h2>
+              <Link to="/editaccount">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
+            <div className="container_box">
+              <br />
+              <h2>Security</h2>
+              <Link to="/editsecurity">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
+            <div className="container_box">
+              <br />
+              <h2>Payment Information</h2>
+              <Link to="/editpayment">
+                <button className="button_account">Edit</button>
+              </Link>
+            </div>
           </div>
-          <div className="container_box">
-            <br />
-            <h2>Payment Information</h2>
-            <Link to="/editpayment">
-              <button className="button_account">Edit</button>
-            </Link>
-          </div>
-        </div>
+        )}
       </div>
     );
   }

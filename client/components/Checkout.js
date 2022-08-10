@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getUserCart } from '../store/redux/cart';
+import { getUserCart, finishCheckout } from '../store/redux/cart';
 import { updateUser } from '../store/auth';
 import { updateOrder } from '../store/redux/order';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,7 @@ class Checkout extends Component {
       id: this.props.order.id,
       reciept: { recieptNumer: this.recieptNum(), status: 'closed' },
     });
+    this.props.finishCheckout();
   }
 
   isLoggedIn() {
@@ -215,6 +216,7 @@ const mapDispatch = (dispatch) => ({
   getUserCart: (id) => dispatch(getUserCart(id)),
   updateUser: (auth) => dispatch(updateUser(auth)),
   updateOrder: (id) => dispatch(updateOrder(id)),
+  finishCheckout: () => dispatch(finishCheckout()),
 });
 
 export default connect(mapState, mapDispatch)(Checkout);

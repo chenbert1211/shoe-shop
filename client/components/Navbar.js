@@ -17,7 +17,16 @@ const Navbar = ({ handleClick, isLoggedIn, auth }) => (
           {isLoggedIn ? (
             <div id="user-container">
               <a>{auth.username}</a>
-              <div id="user-icon"></div>
+              <div id="user-icon">
+                {auth.imageUrl ? (
+                  <img className="profile-pic" src={auth.imageUrl}></img>
+                ) : (
+                  <img
+                    className="profile-pic"
+                    src="https://cdn2.iconfinder.com/data/icons/ui-1/60/05-512.png"
+                  ></img>
+                )}
+              </div>
               <div id="user-container-dropdown">
                 <Link to="/account">
                   <a id="account-dropdown">Account</a>
@@ -28,7 +37,12 @@ const Navbar = ({ handleClick, isLoggedIn, auth }) => (
           ) : (
             <div id="user-container">
               <a>Guest</a>
-              <div id="user-icon"></div>
+              <div id="user-icon">
+                <img
+                  className="profile-pic"
+                  src="https://cdn2.iconfinder.com/data/icons/ui-1/60/05-512.png"
+                ></img>
+              </div>
               <div id="user-container-dropdown">
                 <Link to="/signup">
                   <a>Create Account</a>
