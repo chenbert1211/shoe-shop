@@ -82,14 +82,15 @@ const products = [
 
 const users = [
   {
-    username: "username1",
-    password: "password1",
+    username: "qwe",
+    password: "qwe",
     firstName: "Watson",
     lastName: "Chen",
     email: "wc.watsonchen@gmail.com",
     creditCard: "1234567890123456",
     address: "100 Lake Rd",
     phoneNumber: "6504577805",
+    isAdmin: true,
   },
 ];
 
@@ -131,7 +132,7 @@ const seed = async () => {
         });
       })
     );
-
+  
     // await Promise.all(
     //   products.map((product) => {
     //     return Order_Product.create({
