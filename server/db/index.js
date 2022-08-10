@@ -17,8 +17,8 @@ User.hasMany(Order);
 Order_Product.belongsTo(Product);
 Product.hasMany(Order_Product);
 
-Order_Product.hasOne(Order);
-Order.hasMany(Order_Product);
+// Order_Product.hasOne(Order);
+// Order.hasMany(Order_Product);
 
 // Product.belongsToMany(Order, { through: Order_Product });
 // Order.belongsToMany(Product, { through: Order_Product });

@@ -18,7 +18,8 @@ const products = [
     brand: "Adidas",
     quantity: 10,
     price: 220,
-    stylecode: "378037061",
+    stylecode: "100",
+    gender:"male"
   },
   {
     name: "Air Jordan",
@@ -28,6 +29,8 @@ const products = [
     brand: "Adidas",
     quantity: 10,
     price: 220,
+    stylecode: "101",
+    gender:"male"
   },
   {
     name: "Yeezy Boots Pro",
@@ -37,6 +40,8 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
     quantity: 10,
+    stylecode: "102",
+    gender:"male"
   },
   {
     name: "Yeezy_Boots_Sport",
@@ -46,6 +51,8 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
     quantity: 10,
+    stylecode: "103",
+    gender:"male"
   },
   {
     name: "Air Max Pro",
@@ -56,6 +63,8 @@ const products = [
     brand: "Nike",
     quantity: 10,
     price: 210,
+    stylecode: "104",
+    gender:"male"
   },
 
   {
@@ -66,6 +75,8 @@ const products = [
       "African-American rapper, songwriter, actor and record producer Antwan André Patton (born 1975), known by his stage name Big Boi, is best known for being a member of the southern hip hop duo Outkast. Pair of white Nike sneakers with glitter red, blue, and yellow sections worn by Big Boi of Outkast. The low-top sneakers have white leather on the perforated top toes, the front half of the side vamps, the upper portion of the heel cap, and on the facing of the tongues. ",
     brand: "Nike",
     quantity: 10,
+    stylecode: "105",
+    gender:"male"
   },
   {
     name: "Retro Desert Style",
@@ -75,6 +86,8 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
     quantity: 10,
+    stylecode: "106",
+    gender:"male"
   },
   {
     name: "Universty Gold",
@@ -85,6 +98,8 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
     quantity: 10,
+    stylecode: "107",
+    gender:"male"
   },
   {
     name: "Foam Sport",
@@ -94,6 +109,8 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
     quantity: 10,
+    stylecode: "108",
+    gender:"male"
   },
   {
     name: "Soldier Green Sport",
@@ -103,6 +120,59 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
     quantity: 10,
+    stylecode: "109",
+    gender:"male"
+  },
+  {
+    name: "Air Max S",
+    imageUrl:"https://cdn.flightclub.com/2600/TEMPLATE/311754/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    brand: "Nike",
+    quantity: 10,
+    stylecode: "110",
+    gender:"male"
+  },
+  {
+    name: "MONO ICE",
+    imageUrl:"https://cdn.flightclub.com/2200/TEMPLATE/260879/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    brand: "Adidas",
+    quantity: 10,
+    stylecode: "111",
+    gender:"women"
+
+  },
+  {
+    name: "POLY ORANGE",
+    imageUrl:"https://cdn.flightclub.com/2200/TEMPLATE/266530/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    brand: "Adidas",
+    quantity: 10,
+    stylecode: "112",
+    gender:"women"
+  },
+  {
+    name: "NMD Pink",
+    imageUrl:"https://images.dickssportinggoods.com/is/image/GolfGalaxy/18ADIWNMDR1MNTXXXFTW_Ash_Pearl_White?qlt=70&wid=1100&fmt=webp",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    brand: "Adidas",
+    quantity: 10,
+    stylecode: "113",
+    gender:"women"
+  },
+  {
+    name: "Winds Dunk Rse",
+    imageUrl:"https://cdn.flightclub.com/2200/TEMPLATE/296986/1.jpg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    brand: "Nike",
+    quantity: 10,
+    stylecode: "114",
+    gender:"women"
   },
   {
     name: "Foam-Sport S",
@@ -112,41 +182,9 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
     quantity: 10,
+    stylecode: "115",
+    gender:"women"
   },
-  {
-    name: "Air Max S",
-    imageUrl:"https://cdn.flightclub.com/2600/TEMPLATE/311754/1.jpg",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    brand: "Nike",
-    quantity: 10,
-  },
-  {
-    name: "MONO ICE",
-    imageUrl:"https://cdn.flightclub.com/2200/TEMPLATE/260879/1.jpg",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    brand: "Adidas",
-    quantity: 10,
-  },
-  {
-    name: "MONO ICE",
-    imageUrl:"https://cdn.flightclub.com/2200/TEMPLATE/266530/1.jpg",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    brand: "Adidas",
-    quantity: 10,
-  },
-  {
-    name: "NMD Pink",
-    imageUrl:"https://images.dickssportinggoods.com/is/image/GolfGalaxy/18ADIWNMDR1MNTXXXFTW_Ash_Pearl_White?qlt=70&wid=1100&fmt=webp",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    brand: "Adidas",
-    quantity: 10,
-  },
-
-
 ];
 
 const users = [
@@ -195,711 +233,227 @@ const users = [
 
 
 /**********
- ORDER_PRODUCTS
+ MEN ORDER_PRODUCTS
 **********/
-const order_products = [
+const menSize_orderProducts = [
+  {
 
-  {
-    productId: 1,
-    quantity: 10,
-    size: 1,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 2,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 3,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 4,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 5,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 6,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 1,
     quantity: 10,
     size: 7,
-    category: "W",
+    category: "M",
     price: 70000,
   },
   {
-    productId: 1,
+
+    quantity: 10,
+    size: 7.5,
+    category: "M",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 8,
-    category: "W",
+    category: "M",
     price: 70000,
   },
   {
-    productId: 1,
+
+    quantity: 10,
+    size: 8.5,
+    category: "M",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 9,
     category: "M",
     price: 70000,
   },
   {
-    productId: 1,
-    quantity: 10,
-    size: 10,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 11,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 12,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 13,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 14,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 15,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 16,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 18,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 1,
-    quantity: 10,
-    size: 19,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 1,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 2,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 3,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 4,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 5,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 6,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 7,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 8,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 2,
+
     quantity: 10,
     size: 9,
     category: "M",
     price: 70000,
   },
   {
-    productId: 2,
+
     quantity: 10,
     size: 10,
     category: "M",
     price: 70000,
   },
   {
-    productId: 2,
+
     quantity: 10,
     size: 11,
     category: "M",
     price: 70000,
   },
   {
-    productId: 2,
+
+    quantity: 10,
+    size: 11.5,
+    category: "M",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 12,
     category: "M",
     price: 70000,
   },
   {
-    productId: 2,
+
+    quantity: 10,
+    size: 12.5,
+    category: "M",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 13,
     category: "M",
     price: 70000,
   },
   {
-    productId: 2,
+
+    quantity: 10,
+    size: 13.5,
+    category: "M",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 14,
     category: "M",
     price: 70000,
   },
+]
+
+
+
+/**********
+ WOMEN ORDER_PRODUCTS
+**********/
+
+const womenSize_orderProducts = [
   {
-    productId: 2,
-    quantity: 10,
-    size: 15,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 16,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 18,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 2,
-    quantity: 10,
-    size: 19,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 1,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 2,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 3,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 4,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 3,
+
     quantity: 10,
     size: 5,
     category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 5.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 6,
     category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 6.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 7,
     category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 7.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 8,
     category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 8.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 9,
-    category: "M",
+    category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 9.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 10,
-    category: "M",
+    category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 10.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 11,
-    category: "M",
+    category: "W",
     price: 70000,
   },
   {
-    productId: 3,
+
+    quantity: 10,
+    size: 11.5,
+    category: "W",
+    price: 70000,
+  },
+  {
+
     quantity: 10,
     size: 12,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 13,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 14,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 15,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 16,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 18,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 3,
-    quantity: 10,
-    size: 19,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 1,
     category: "W",
     price: 70000,
   },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 2,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 3,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 4,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 5,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 6,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 7,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 8,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 9,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 10,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 11,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 12,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 13,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 14,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 15,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 16,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 18,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 4,
-    quantity: 10,
-    size: 19,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 1,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 2,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 3,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 4,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 5,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 6,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 7,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 8,
-    category: "W",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 9,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 10,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 11,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 12,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 13,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 14,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 15,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 16,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 17,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 18,
-    category: "M",
-    price: 70000,
-  },
-  {
-    productId: 5,
-    quantity: 10,
-    size: 19,
-    category: "M",
-    price: 70000,
-  },
-];
+
+]
+
+
+
+
 
 const seed = async () => {
   try {
@@ -910,18 +464,44 @@ const seed = async () => {
       products.map((product) => {
         return Product.create({
           name: product.name,
-          imageUrl: product.imageUrl,
           brand: product.brand,
+          gender:product.gender,
+          stylecode:product.stylecode,
+          imageUrl: product.imageUrl,
+          description:product.description,
         });
       })
     );
 
+        for(let i=1; i<products.length; i++){
+          if(products[i].gender ==='male'){
+            await Promise.all(
+              menSize_orderProducts.map((orderProduct) => {
+                return Order_Product.create({
+                  productId:i,
+                  quantity: orderProduct.quantity,
+                  size: orderProduct.size,
+                  category: orderProduct.category,
+                  price: orderProduct.price,
+                });
+              })
+            );
+          }else {
+            await Promise.all(
+              womenSize_orderProducts.map((orderProduct) => {
+                return Order_Product.create({
+                  productId:i,
+                  quantity: orderProduct.quantity,
+                  size: orderProduct.size,
+                  category: orderProduct.category,
+                  price: orderProduct.price,
 
-    await Promise.all(
-      order_products.map((orderProduct) => {
-        return Order_Product.create(orderProduct);
-      })
-    );
+                });
+              })
+            );
+          }
+        }
+
 
     await Promise.all(
       users.map((user) => {

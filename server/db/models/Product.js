@@ -21,14 +21,14 @@ const Product = db.define("product", {
   },
   brand: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
+
   },
   stylecode: {
     type: Sequelize.STRING,
   },
+  gender:{
+    type: Sequelize.STRING,
+  }
 },
 {timestamps:false}
 );
