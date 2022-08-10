@@ -1,8 +1,8 @@
-import React from "react";
-import axios from "axios";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { updateUser } from "../store/auth";
+import React from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { updateUser } from '../store/auth';
 
 class EditPayment extends React.Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class EditPayment extends React.Component {
   render() {
     const { creditCard, nameOnCard, CardExp, address, city, state, zipCode } =
       this.state;
-    // console.log(this.state)
+
     return (
       <div id="edit_account_body">
         <div className="edit_payment_content">
@@ -185,7 +185,6 @@ class EditPayment extends React.Component {
 }
 
 const mapState = (state) => {
-  // console.log(state)
   return {
     auth: state.auth,
   };

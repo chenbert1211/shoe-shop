@@ -11,7 +11,9 @@ import EditAccount from './components/EditAccount';
 import EditPayment from './components/EditPayment';
 import EditSec from './components/EditSec';
 import Checkout from './components/Checkout';
-
+import Receipt from './components/Receipt';
+import SeeUsers from './components/SeeUsers';
+import EditInv from './components/EditInv';
 /**
  * COMPONENT
  */
@@ -37,6 +39,9 @@ class Routes extends Component {
             <Route path="/editpayment" component={EditPayment} />
             <Route path="/editsecurity" component={EditSec} />
             <Route path="/checkout" component={Checkout} />
+            <Route path="/reciept" component={Receipt} />
+            <Route path="/seeusers" component={SeeUsers} />
+            <Route path="/editinventory" component={EditInv} />
           </Switch>
         ) : (
           <Switch>
@@ -46,6 +51,7 @@ class Routes extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
+            <Route path="/reciept" component={Receipt} />
           </Switch>
         )}
       </div>

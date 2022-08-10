@@ -1,64 +1,60 @@
-const router = require('express').Router()
-const { models: {User }} = require('../db')
-module.exports = router
+const router = require('express').Router();
+const {
+  models: { User },
+} = require('../db');
+module.exports = router;
 
 router.post('/login', async (req, res, next) => {
   try {
-    res.send({ token: await User.authenticate(req.body)}); 
+    res.send({ token: await User.authenticate(req.body) });
   } catch (err) {
-    next(err)
+    next(err);
   }
-})
-
+});
 
 router.post('/signup', async (req, res, next) => {
   try {
-    console.log(req.body)
-    const user = await User.create(req.body)
-    res.send({token: await user.generateToken()})
-    
-    
-    
+    const user = await User.create(req.body);
+    res.send({ token: await user.generateToken() });
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
-      res.status(401).send('User already exists')
+      res.status(401).send('User already exists');
     } else {
-      next(err)
+      next(err);
     }
   }
-})
+});
 
 router.get('/me', async (req, res, next) => {
   try {
-    res.send(await User.findByToken(req.headers.authorization))
+    res.send(await User.findByToken(req.headers.authorization));
   } catch (ex) {
-    next(ex)
+    next(ex);
   }
-})
+});
 
 router.put('/update', async (req, res, next) => {
-  try{
-  const name = req.body
-  const updateAcc = await User.findOne({
+  try {
+    const name = req.body;
+    const updateAcc = await User.findOne({
       where: {
         id: name.id,
       },
-    })
-    // console.log(name, updateAcc)
-  res.send(updateAcc.update(name))
-  }catch(error){
-    next(error)
-  }
-})
+    });
 
+    res.send(updateAcc.update(name));
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.delete('/delete', async (req, res, next) => {
-  try{
-  const id = req.body
-  const deleteAccount= await User.findByPk(id.id)
-    // console.log(deleteAccount)
-  res.send(await deleteAccount.destroy())
-  }catch(error){
-    next(error)
+  try {
+    const id = req.body;
+    const deleteAccount = await User.findByPk(id.id);
+
+    res.send(await deleteAccount.destroy());
+  } catch (error) {
+    next(error);
   }
-})
+});

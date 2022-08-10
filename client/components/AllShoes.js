@@ -29,15 +29,26 @@ export class AllShoes extends Component {
 
   render() {
     const allShoes = this.props.allShoes;
-    console.log(allShoes);
     const { clickHandler, clearFilter } = this;
+    const brandArr = [];
     const filteredArr = allShoes.filter((shoe) => {
       if (this.state.brand === 'all') {
         return shoe;
-      } else if (shoe.name === this.state.brand) {
+      } else if (shoe.brand === this.state.brand) {
         return shoe;
       }
     });
+
+    const unsortedBrandArr = allShoes.map((shoe) => {
+      return shoe.brand;
+    });
+
+    for (let i = 0; i < unsortedBrandArr.length; i++) {
+      if (!brandArr.includes(unsortedBrandArr[i])) {
+        brandArr.push(unsortedBrandArr[i]);
+      }
+    }
+
     return (
       <div id="all-shoes-view">
         {/* FILTER BAR */}
@@ -48,17 +59,16 @@ export class AllShoes extends Component {
 
           <div id="brand-filter-content">
             <form>
-              {allShoes.map((shoe) => {
+              {brandArr.map((brand, idx) => {
                 return (
-                  <a
-                    key={shoe.id}
+                  <div
+                    key={idx}
                     onClick={() => {
-                      console.log(filteredArr);
                       clickHandler(event);
                     }}
                   >
-                    {shoe.name}
-                  </a>
+                    {brand}
+                  </div>
                 );
               })}
               <button type="button" onClick={clearFilter}>

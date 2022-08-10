@@ -1,22 +1,22 @@
-const router = require("express").Router();
-const e = require("express");
+const router = require('express').Router();
+const e = require('express');
 const {
   models: { Product, Order_Product },
-} = require("../db");
+} = require('../db');
 
-router.get("/", async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    const products = await Product.findAll({include: Order_Product});
+    const products = await Product.findAll({ include: Order_Product });
     res.json(products);
   } catch (err) {
     next(err);
   }
 });
 
-router.get("/:productId", async (req, res, next) => {
+router.get('/:productId', async (req, res, next) => {
   const id = req.params.productId;
   try {
-    const product = await Product.findByPk(id, {include: Order_Product});
+    const product = await Product.findByPk(id, { include: Order_Product });
     if (product) {
       res.send(product);
     } else {
@@ -24,6 +24,18 @@ router.get("/:productId", async (req, res, next) => {
     }
   } catch (err) {
     next(err);
+  }
+});
+
+router.delete('/delete', async (req, res, next) => {
+  try {
+    let id = req.body.id;
+
+    const delProduct = await Product.findByPk(id);
+    await delProduct.destroy();
+    res.send(delProduct);
+  } catch (error) {
+    next(error);
   }
 });
 

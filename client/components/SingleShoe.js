@@ -31,7 +31,6 @@ export class SingleShoe extends Component {
     }
   }
   sizeAddToCart() {
-    // console.log(this.props)
     if (this.state.size != null) {
       alert('added To Cart!');
       this.props.addToCart(this.state.size.id);
@@ -43,10 +42,10 @@ export class SingleShoe extends Component {
 
   render() {
     const shoe = this.props.singleShoe;
-    // console.log(this.props);
+
     const allShoes = this.props.allShoes;
     const { allSize } = this.state;
-    // console.log(this.state.size)
+
     return (
       <div id="single-shoe-view">
         <div id="shoe-detail-container">
@@ -87,12 +86,14 @@ export class SingleShoe extends Component {
           <a>Reccomended Products</a>
           <div id="reccomended-products">
             <div id="reccomended-details">
-              {allShoes.map((currentShoe) => {
-                if (currentShoe.name !== shoe.name) {
+              {allShoes.map((currentShoe, idx) => {
+                if (currentShoe.name !== shoe.name && idx < 7) {
                   return (
                     <div key={currentShoe.id} id="reccomended-shoe">
-                      <img src={currentShoe.imageUrl} />
-                      <a>{currentShoe.name}</a>
+                      <a href={`/product/${currentShoe.id}`}>
+                        <img src={currentShoe.imageUrl} />
+                        <a>{currentShoe.name}</a>
+                      </a>
                     </div>
                   );
                 }
