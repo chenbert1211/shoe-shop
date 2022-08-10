@@ -8,6 +8,7 @@ const {
 //GET
 router.get("/", async (req, res, next) => {
   try {
+    // console.log('hii' ,req.body)
     const orders = await Order.findAll();
     res.json(orders);
   } catch (err) {
@@ -34,9 +35,21 @@ router.get("/", async (req, res, next) => {
 //localhost/order/:userId
 router.post("/", async(req,res,next) =>{
   try {
-    // console.log("id", req.params.id)
+    // console.log(req.body)
     const newOrder = await Order.create(req.body)
+    // console.log(newOrder)
     res.status(201).send(newOrder)
+  } catch (err) {
+    next(err);
+  }
+})
+
+
+router.put("/", async(req,res,next) =>{
+  try {
+    const updateOrder = await Order.findByPk(req.body.id)
+    updateOrder.update(req.body.reciept)
+    res.send(updateOrder)
   } catch (err) {
     next(err);
   }

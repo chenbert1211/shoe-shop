@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { updateUser } from "../store/auth";
 import { deleteFromCart } from "../store/redux/cart";
+import { createOrder } from "../store/redux/order";
 import { getUserCart, changeQty } from "../store/redux/cart";
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,9 @@ class Cart extends Component {
     super(props);
     // console.log(this.props)
     this.deleteFromCart = this.deleteFromCart.bind(this);
+    this.createOrder = this.createOrder.bind(this);
     this.changeQtiy = this.changeQtiy.bind(this);
+
   }
 
   async componentDidMount() {
@@ -29,6 +32,15 @@ class Cart extends Component {
     if (!!this.props.auth.id) {
       this.props.updateUser({ id: this.props.auth.id, cart: this.props.Cart });
     }
+  }
+  
+  createOrder()
+  {
+    const cartShoe = this.props.Cart
+    // console.log(cartShoeIds, this.props.auth.id)
+    this.props.createOrder({userId: this.props.auth.id,
+      orderPrducts: cartShoe
+    })
   }
 
   async changeQtiy(event) {
@@ -101,7 +113,7 @@ class Cart extends Component {
               </p>
               <div>
                 <Link to="/checkout">
-                  <button className="checkout-button">Checkout</button>
+                  <button onClick={this.createOrder} className="checkout-button">Checkout</button>
                 </Link>
               </div>
             </div>
@@ -122,6 +134,7 @@ const mapDispatch = (dispatch) => ({
   getUserCart: (id) => dispatch(getUserCart(id)),
   updateUser: (auth) => dispatch(updateUser(auth)),
   deleteShoe: (id) => dispatch(deleteFromCart(id)),
+  createOrder: (id) => dispatch(createOrder(id))
   changeQty: (shoe) => dispatch(changeQty(shoe)),
 });
 

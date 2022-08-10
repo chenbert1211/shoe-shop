@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const {
-  models: { User },
+  models: { User, Order },
 } = require("../db");
 
 
@@ -21,11 +21,8 @@ router.get("/", async (req, res, next) => {
 router.get("/:userId", async (req, res, next) => {
   const id = req.params.userId;
   try {
-    const user = await User.findOne({
-      where: {
-        id: id,
-      },
-    });
+    const user = await User.findByPk(
+        id, {include: Order});
     
 
     if (user) {
