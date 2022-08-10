@@ -20,7 +20,7 @@ const products = [
     description:
       "6 Dec 1995: A close-up shot of Air Jordans as they appear on the court during the game between the New York Knicks and the Chicago Bulls at the United Center in Chicago, Illinois. The Bulls defeated the Knicks 101-94. Mandatory Credit: Jonathan Daniel /Allsport",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     price: 220,
     stylecode: "100",
     gender:"male"
@@ -33,7 +33,7 @@ const products = [
     description:
       "6 Dec 1995: A close-up shot of Air Jordans as they appear on the court during the game between the New York Knicks and the Chicago Bulls at the United Center in Chicago, Illinois. The Bulls defeated the Knicks 101-94. Mandatory Credit: Jonathan Daniel /Allsport",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     price: 220,
     stylecode: "101",
     gender:"male"
@@ -45,7 +45,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     stylecode: "102",
     gender:"male"
   },
@@ -56,7 +56,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     stylecode: "103",
     gender:"male"
   },
@@ -67,7 +67,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     price: 210,
     stylecode: "104",
     gender:"male"
@@ -81,7 +81,7 @@ const products = [
     description:
       "African-American rapper, songwriter, actor and record producer Antwan André Patton (born 1975), known by his stage name Big Boi, is best known for being a member of the southern hip hop duo Outkast. Pair of white Nike sneakers with glitter red, blue, and yellow sections worn by Big Boi of Outkast. The low-top sneakers have white leather on the perforated top toes, the front half of the side vamps, the upper portion of the heel cap, and on the facing of the tongues. ",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "105",
     gender:"male"
   },
@@ -93,7 +93,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "106",
     gender:"male"
   },
@@ -105,7 +105,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "107",
     gender:"male"
   },
@@ -116,7 +116,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "108",
     gender:"male"
   },
@@ -127,7 +127,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "109",
     gender:"male"
   },
@@ -138,7 +138,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "110",
     gender:"male"
   },
@@ -148,7 +148,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     stylecode: "111",
     gender:"women"
 
@@ -159,7 +159,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     stylecode: "112",
     gender:"women"
   },
@@ -169,7 +169,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Adidas",
-    quantity: 10,
+    quantity: 1,
     stylecode: "113",
     gender:"women"
   },
@@ -179,7 +179,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "114",
     gender:"women"
   },
@@ -190,7 +190,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
     stylecode: "115",
     gender:"women"
   },
@@ -203,7 +203,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     category: "M",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
   },
   {
     name: "Off-white nike Black",
@@ -214,7 +214,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     category: "M",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
   },
   {
     name: "Off-white and Black",
@@ -225,7 +225,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     category: "W",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
   },
   {
     name: "Universty Gold",
@@ -236,7 +236,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     category: "M",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
   },
   {
     name: "Soldier and Pine Green",
@@ -247,7 +247,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     category: "M",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
   },
   {
     name: "Yeezy Boots Red",
@@ -258,7 +258,7 @@ const products = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     category: "M",
     brand: "Nike",
-    quantity: 10,
+    quantity: 1,
   },
 
 ];
@@ -324,98 +324,98 @@ const users = [
 const menSize_orderProducts = [
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 7,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 7.5,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 8,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 8.5,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 9,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 9,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 10,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 11,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 11.5,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 12,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 12.5,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 13,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 13.5,
     category: "M",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 14,
     category: "M",
     price: 70000,
@@ -437,105 +437,105 @@ const menSize_orderProducts = [
 const womenSize_orderProducts = [
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 5.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 6,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 6.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 7,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 7.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 8,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 8.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 9,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 9.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 10,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 10.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 11,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 11.5,
     category: "W",
     price: 70000,
   },
   {
 
-    quantity: 10,
+    quantity: 1,
     size: 12,
     category: "W",
     price: 70000,

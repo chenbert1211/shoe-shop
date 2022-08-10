@@ -134,7 +134,7 @@ const mapDispatch = (dispatch) => ({
   getUserCart: (id) => dispatch(getUserCart(id)),
   updateUser: (auth) => dispatch(updateUser(auth)),
   deleteShoe: (id) => dispatch(deleteFromCart(id)),
-  createOrder: (id) => dispatch(createOrder(id))
+  createOrder: (id) => dispatch(createOrder(id)),
   changeQty: (shoe) => dispatch(changeQty(shoe)),
 });
 
