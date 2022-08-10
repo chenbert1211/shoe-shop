@@ -33,7 +33,7 @@ class Cart extends Component {
       this.props.updateUser({ id: this.props.auth.id, cart: this.props.Cart });
     }
   }
-  
+
   createOrder()
   {
     const cartShoe = this.props.Cart
@@ -134,7 +134,7 @@ const mapDispatch = (dispatch) => ({
   getUserCart: (id) => dispatch(getUserCart(id)),
   updateUser: (auth) => dispatch(updateUser(auth)),
   deleteShoe: (id) => dispatch(deleteFromCart(id)),
-  createOrder: (id) => dispatch(createOrder(id))
+  createOrder: (id) => dispatch(createOrder(id)),
   changeQty: (shoe) => dispatch(changeQty(shoe)),
 });
 
