@@ -29,7 +29,7 @@ export class AllShoes extends Component {
 
   render() {
     const allShoes = this.props.allShoes;
-    console.log(allShoes);
+    // console.log(allShoes);
     const { clickHandler, clearFilter } = this;
     const filteredArr = allShoes.filter((shoe) => {
       if (this.state.brand === 'all') {
@@ -53,7 +53,7 @@ export class AllShoes extends Component {
                   <a
                     key={shoe.id}
                     onClick={() => {
-                      console.log(filteredArr);
+                      // console.log(filteredArr);
                       clickHandler(event);
                     }}
                   >
