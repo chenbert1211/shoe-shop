@@ -270,13 +270,15 @@ const products = [
 const users = [
 
   {
-    username: "watson",
-    password: "watson123",
-
+    username: "qwe",
+    password: "qwe",
     firstName: "Watson",
     lastName: "Chen",
     email: "watson@gmail.com",
     creditCard: "1234567890123456",
+    address: "100 Lake Rd",
+    phoneNumber: "6504577805",
+    isAdmin: true,
     address: "200 Lake Rd",
     phoneNumber: "6504424444",
   },
@@ -289,6 +291,7 @@ const users = [
     creditCard: "1234567890123457",
     address: "300 Lake Rd",
     phoneNumber: "6504424455",
+    isAdmin: true,
   },
   {
     username: "Cole",
@@ -299,6 +302,7 @@ const users = [
     creditCard: "1234567890123458",
     address: "400 Lake Rd",
     phoneNumber: "6504424466",
+    isAdmin: true,
   },
   {
     username: "Emre",
@@ -309,6 +313,7 @@ const users = [
     creditCard: "1234567890123459",
     address: "500 Lake Rd",
     phoneNumber: "6504424477",
+    isAdmin: true,
   },
 ];
 
@@ -560,6 +565,7 @@ const seed = async () => {
       })
     );
 
+
         for(let i=1; i<products.length; i++){
           if(products[i].gender ==='male'){
             await Promise.all(
@@ -588,6 +594,7 @@ const seed = async () => {
             );
           }
         }
+
 
 
     await Promise.all(
