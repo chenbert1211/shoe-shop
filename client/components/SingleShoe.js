@@ -91,8 +91,10 @@ export class SingleShoe extends Component {
                 if (currentShoe.name !== shoe.name) {
                   return (
                     <div key={currentShoe.id} id="reccomended-shoe">
-                      <img src={currentShoe.imageUrl} />
-                      <a>{currentShoe.name}</a>
+                      <a href={`/product/${currentShoe.id}`}>
+                        <img src={currentShoe.imageUrl} />
+                        <a>{currentShoe.name}</a>
+                      </a>
                     </div>
                   );
                 }

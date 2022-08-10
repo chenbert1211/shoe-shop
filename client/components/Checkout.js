@@ -1,31 +1,126 @@
 import React, { Component } from 'react';
-// import { getUserCart } from '../store/redux/cart';
+import { getUserCart } from '../store/redux/cart';
 import { updateUser } from '../store/auth';
-import { updateOrder } from "../store/redux/order";
-import { Link } from "react-router-dom";
+import { updateOrder } from '../store/redux/order';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Checkout extends Component {
   constructor(props) {
     super(props);
-    
-    this.recieptNum = this.recieptNum.bind(this)
-    this.completedOrder = this.completedOrder.bind(this)
+
+    this.recieptNum = this.recieptNum.bind(this);
+    this.completedOrder = this.completedOrder.bind(this);
   }
-  
-  recieptNum()
-  {
+
+  recieptNum() {
     let d = new Date();
-    function f(n) { return n < 10 ? '0' + n : n; }  
-    let random_num = Math.floor(Math.random() * (99999999999 -  10000000000)) + 10000000000;
-    random_num = d.getFullYear() + f(d.getMonth()+1) + f(d.getDate()) + random_num; 
-    return random_num
+    function f(n) {
+      return n < 10 ? '0' + n : n;
+    }
+    let random_num =
+      Math.floor(Math.random() * (99999999999 - 10000000000)) + 10000000000;
+    random_num =
+      d.getFullYear() + f(d.getMonth() + 1) + f(d.getDate()) + random_num;
+    return random_num;
   }
-  
-  completedOrder(event)
-  {
-    this.props.updateOrder({id: this.props.order.id,reciept:{recieptNumer: this.recieptNum(), status: 'closed'
-    }})
+
+  completedOrder(event) {
+    this.props.updateOrder({
+      id: this.props.order.id,
+      reciept: { recieptNumer: this.recieptNum(), status: 'closed' },
+    });
+  }
+
+  isLoggedIn() {
+    const user = this.props.auth;
+    const cartArray = this.props.Cart;
+    const cardNumArr =
+      typeof user.creditCard === 'string' ? user.creditCard.split('') : '';
+
+    const lastFourNums = `${cardNumArr[12]}${cardNumArr[13]}${cardNumArr[14]}${cardNumArr[15]} `;
+
+    if (user.id) {
+      return (
+        <div id="checkout-user-info">
+          <div className="checkout-payment-title">
+            Payment & Shipping Information
+          </div>
+          <div className="payment-shipping-title">Shipping Address</div>
+          <div>
+            {user.address}, {user.city}, {user.state} {user.zipCode}
+          </div>
+          <div>
+            <div className="payment-shipping-title">Card Number</div>
+            ...............{lastFourNums}
+          </div>
+          <div className="payment-shipping-title">Card Expiration</div>
+          <div>{user.CardExp}</div>
+          <div className="payment-shipping-title">Name On Card</div>
+          <div>
+            {user.firstName} {user.lastName}
+          </div>
+          <Link to="/reciept">
+            <button
+              onClick={this.completedOrder}
+              id="confirm-checkout-button"
+              type="button"
+            >
+              Confirm and Checkout
+            </button>
+          </Link>
+        </div>
+      );
+    } else {
+      return (
+        <div id="checkout-user-info">
+          <form>
+            <div className="checkout-payment-title">
+              Payment & Shipping Information
+            </div>
+            <div className="guest-checkout-input-field">
+              <input
+                type="text"
+                placeholder="Enter Shipping Address"
+                className="payment-shipping-title"
+              />
+            </div>
+
+            <div className="guest-checkout-input-field">
+              <input
+                type="text"
+                placeholder="Enter Card Number"
+                className="payment-shipping-title"
+              />
+            </div>
+            <div className="guest-checkout-input-field">
+              <input
+                type="text"
+                placeholder="Enter Card Expiration"
+                className="payment-shipping-title"
+              />
+            </div>
+            <div className="guest-checkout-input-field">
+              <input
+                type="text"
+                placeholder="Name On Card"
+                className="payment-shipping-title"
+              />
+            </div>
+
+            <Link to="/reciept">
+              <button
+                onClick={this.completedOrder}
+                id="confirm-checkout-button"
+                type="button"
+              >
+                Confirm and Checkout
+              </button>
+            </Link>
+          </form>
+        </div>
+      );
+    }
   }
 
   async componentDidMount() {
@@ -35,11 +130,13 @@ class Checkout extends Component {
         id: this.props.auth.id,
         cart: this.props.Cart,
       });
+      // const cartArray = this.props.Cart;
     }
   }
 
   render() {
-    const cartArray = this.props.auth.cart;
+    // const cartArray = this.props.auth.cart;
+    const cartArray = this.props.Cart;
     const user = this.props.auth;
     const cardNumArr =
       typeof user.creditCard === 'string' ? user.creditCard.split('') : '';
@@ -91,7 +188,8 @@ class Checkout extends Component {
             </div>
           </div>
         </div>
-        <div id="checkout-user-info">
+        {this.isLoggedIn()}
+        {/* <div id="checkout-user-info">
           <div className="checkout-payment-title">
             Payment & Shipping Information
           </div>
@@ -110,13 +208,15 @@ class Checkout extends Component {
             {user.nameOnCard} {user.lastName}
           </div>
           <Link to="/reciept">
-          <button  onClick={this.completedOrder} id="confirm-checkout-button" type="button">
-            Confirm and Checkout
-          </button></Link>
-        </div>
-        {/* <button id="confirm-checkout-button" type="button">
-          Confirm and Checkout
-        </button> */}
+            <button
+              onClick={this.completedOrder}
+              id="confirm-checkout-button"
+              type="button"
+            >
+              Confirm and Checkout
+            </button>
+          </Link>
+        </div> */}
       </div>
     );
   }
@@ -127,17 +227,14 @@ const mapState = (state) => {
     Cart: state.cartReducer,
     auth: state.auth,
     order: state.orderReducer.currentOrder,
-    user: state.auth
-
+    user: state.auth,
   };
 };
 
 const mapDispatch = (dispatch) => ({
-  // getUserCart: (id) => dispatch(getUserCart(id)),
+  getUserCart: (id) => dispatch(getUserCart(id)),
   updateUser: (auth) => dispatch(updateUser(auth)),
   updateOrder: (id) => dispatch(updateOrder(id)),
 });
 
-
 export default connect(mapState, mapDispatch)(Checkout);
-
