@@ -9,9 +9,11 @@ class Account extends Component {
     
     render(){
     //   console.log(this.props.auth)
-    //   const { auth } = this.props
+      const { auth } = this.props
         return(
             
+             <div>
+            {auth.isAdmin == true?
             <div>
             <br/><br/><br/><br/><br/><br/><br/>
             Account 
@@ -24,6 +26,36 @@ class Account extends Component {
             <br/>
             Payment inFormation
             <Link to='/editpayment'><button>Edit</button></Link>
+            
+            <br/>
+            Payment inFormation
+            <Link to='/editpayment'><button>Edit</button></Link>
+            
+            <br/>
+            Edit Inventory
+            <Link to='/editinventory'><button>Edit</button></Link>
+            
+            <br/>
+            See all users
+            <Link to='/seeusers'><button>Edit</button></Link>
+            </div>
+            
+               :
+               <div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            Account 
+            <Link to='/editaccount'><button>Edit</button></Link>
+            <br/>
+            
+            Security
+            <Link to='/editsecurity'><button>Edit</button></Link>
+            
+            <br/>
+            Payment inFormation
+            <Link to='/editpayment'><button>Edit</button></Link>
+            
+            </div>}
+            
             </div>)
     }
 }

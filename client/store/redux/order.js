@@ -35,7 +35,7 @@ export const updateOrder = (id) =>{
 
 export const createOrder = (rec) =>{
         return async(dispatch) =>{
-          console.log(rec)
+          // console.log(rec)
           const { data } = await axios.post(`/api/order`, rec )
           dispatch(_createOrder(data))
 }}
