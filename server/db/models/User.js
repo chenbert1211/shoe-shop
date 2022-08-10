@@ -19,39 +19,21 @@ const User = db.define("user", {
 
   firstName: {
     type: Sequelize.STRING,
-    // unique: true,
-    // allowNull: false,
-    // validate: {
-    //   notEmpty: true
-  // }
   },
 
   lastName: {
     type: Sequelize.STRING,
-    unique: true,
-    // allowNull: false,
-    // validate: {
-    //   notEmpty: true
-  // }
   },
 
   email: {
     type: Sequelize.STRING,
-    // allowNull: false,
-    // validate: {
-    //   notEmpty: true,
-    //   isEmail: true,
-    // },
   },
-  
-  
-  
+
+
+
   creditCard: {
     type: Sequelize.STRING,
     allowNull: true,
-    validate: {
-      // isCreditCard: true,
-    },
   },
   nameOnCard:{
     type: Sequelize.STRING
@@ -59,7 +41,7 @@ const User = db.define("user", {
   CardExp:{
     type: Sequelize.STRING
   },
-  
+
   phoneNumber: {
     type: Sequelize.STRING,
     // allowNull: false,
@@ -93,15 +75,15 @@ const User = db.define("user", {
   zipCode:{
     type: Sequelize.INTEGER
   },
-  
-  
-  
+
+
+
   cart:{
      type: Sequelize.ARRAY(Sequelize.JSON),
             defaultValue: []
   },
-  
-  
+
+
   isAdmin: {
     type:Sequelize.BOOLEAN,
     defaultValue: false
