@@ -25,7 +25,7 @@ const AuthForm = (props) => {
           <label htmlFor="password">
             <small>Password</small>
           </label>
-          <input className='box' name="password" type="password" />
+          <input className='form-box' name="password" type="password" />
         </div>
         <div id='submit_form'>
           <button type="submit">{displayName}</button>
