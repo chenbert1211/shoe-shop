@@ -723,6 +723,9 @@ label {
   margin-bottom: 10px;
 }
 
+#cart #input_quantity {
+  width: 40px;
+}
 #cart .btn-area {
   position: absolute;
   bottom: 20px;
@@ -751,7 +754,7 @@ label {
   justify-content: center;
   letter-spacing: -0.8px;
   line-height: 24px;
-  min-width: 100px;
+  min-width: 80px;
 }
 
 #cart .btn-area:hover,
