@@ -1,6 +1,8 @@
 # FS-App-Template
-TEST
-test
+
+
+
+
 ## Setup
 
 To use this as boilerplate, you'll need to take the following steps:
