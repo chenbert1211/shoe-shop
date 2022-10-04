@@ -60,9 +60,6 @@ Sync and seed your database by running `npm run seed`. Running `npm run start:de
 
 Database Setup
 
-
-
-
   3.  `heroku addons:create heroku-postgresql:hobby-dev` to add
       ("provision") a postgres database to your heroku dyno (This creates your production database)
 
