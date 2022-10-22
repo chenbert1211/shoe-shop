@@ -73,3 +73,40 @@ Database Setup
   1.  `heroku git:remote your-app-name` You'll need to be a
       collaborator on the app.
 Now, you should be deployed!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
