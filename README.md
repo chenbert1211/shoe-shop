@@ -18,7 +18,6 @@ git fetch boilermaker
 git merge boilermaker/main
 git branch -m master main
 ```
-
 ## Customize
 
 Now that you've got the code, follow these steps to get acclimated:
