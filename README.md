@@ -10,13 +10,13 @@ To use this as boilerplate, you'll need to take the following steps:
 
 * Now you will have to add the fs-app-template as a remote and merge it into your own repository.
 
+
 ```
 git remote add boilermaker git@github.com:FullstackAcademy/fs-app-template.git
 git fetch boilermaker
 git merge boilermaker/main
 git branch -m master main
 ```
-
 ## Customize
 
 Now that you've got the code, follow these steps to get acclimated:
@@ -31,7 +31,6 @@ Now that you've got the code, follow these steps to get acclimated:
 createdb <YOUR APP NAME HERE FROM package.json>
 createdb <YOUR APP NAME HERE FROM package.json>-test
 ```
-
 * By default, running `npm test` will use your test database, while
   regular development uses development database
 
